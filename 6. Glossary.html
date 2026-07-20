@@ -4,50 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/pages/components/styles_components.css">
-    <link rel="stylesheet" href="/css files/before-surgery-styling.css">
-    <link rel="stylesheet" href="/css files/after-surgery-styling.css">
+    <link rel="stylesheet" href="css_files/styles_components.css">
+    <link rel="stylesheet" href="css_files/before-surgery-styling.css">
+    <link rel="stylesheet" href="css_files/after-surgery-styling.css">
     <link rel="icon" href="images/favicon.png">
-    <script defer src="JS files/include.js"></script>
+    <script defer src="JS_files/include.js"></script>
     <title>Glossary</title>
 </head>
 
 <body>
-    <div data-include="../pages/components/header.html"></div>
+    <div data-include="header.html"></div>
     <div class="menu">
-        <div data-include="../pages/components/menu.html"></div>
+        <div data-include="menu.html"></div>
     </div>
 
 
     <div id="main">
         <main>
 
-            <div class="page-titles-container">
+            <div class="page-titles-container breadcrumb-container">
                 <ul class="breadcrumb">
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a>Glossary</a></li>
-                    <h1>Glossary</h1>
+
+                </ul>
             </div>
 
-            <div class="paragraph-section">
+            <div class="page-top-container">
+                <div class="title-column">
+                    <div class="page-titles-container">
+                        <h1>Glossary</h1>
+                        <p>This page provides definitions for terms related to anatomy, surgery, and other medical
+                            content. The terms are arranged by topic.</p>
+                    </div>
+                </div>
+
+                <div class="summary-column">
+                    <div class="summary-box-test">
+                        <h2>Page Contents</h2>
+                        <div class="summary-content-test">
+                            <ul>
+                                <li>
+                                    <p><a href="#abbreviations">Abbreviations</a>
+                                <li>
+                                    <p><a href="#anatomy">Anatomy Terms</a>
+                                </li>
+                                <li>
+                                    <p><a href="#surgery">Surgery Terms</a>
+                                </li>
+                                <li>
+                                    <p><a href="#recovery">Complications and Recovery Terms</a>
+                                </li>
+                                <li>
+                                    <p><a href="#healthcare">General Healthcare Terms</a>
+                                </li>
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--add back when hover terms are added / modify to reflect current site-->
+
+            <!--<div class="paragraph-section">
                 <div class="content-section">
                     <div class="content-item">
                         <p>Any underlined words on this site are also included here. Terms are arranged by topic.
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
-            <div class="summary-box glossary-box">
-                <h2>Term Categories</h2>
-                <p><b>View terms related to:</b><br></br><br></br>
-                    <a href="#abbreviations">Abbreviations<br></br>
-                        <a href="#anatomy">Anatomy</a><br></br>
-                        <a href="#surgery">Surgery</a><br></br>
-                        <a href="#recovery">Complications and Recovery</a><br></br>
-                        <a href="#healthcare">General healthcare</a>
-                </p>
-            </div>
 
             <div class="paragraph-section">
                 <h2 id="abbreviations">Abbreviations</h2>
@@ -505,14 +534,14 @@
             </div>
 
 
-                <button onclick="topFunction()" id="scroll-top" title="Go to top" class="scroll-top-btn">↑</button>
+            <button onclick="topFunction()" id="scroll-top" title="Go to top" class="scroll-top-btn">↑</button>
 
         </main>
     </div>
 
 
-    <div data-include="../pages/components/footer.html"></div>
-    <script src="/JS files/include.js"></script>
+    <div data-include="footer.html"></div>
+    <script src="JS_files/include.js"></script>
 </body>
 
 </html>

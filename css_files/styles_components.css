@@ -22,7 +22,7 @@
     font-family: Nunito;
     font-weight: bold;
     font-style: normal;
-    src: url(../../images/Nunito/static/Nunito-Bold.ttf);
+    src: url(../images/Nunito/static/Nunito-Bold.ttf);
 }
 
 /* SS Comment: Clamp horizontal overflow so two-finger side-scrolling cannot reveal blank columns. */
@@ -720,7 +720,7 @@ a.nav-links.active::after {
 .quick-esc-button {
     cursor: pointer;
     border: none;
-    background-color: white;
+    background-color: var(--light-grey);
     color: var(--dark-grey-text);
     padding: 10px;
     border-radius: 100px;

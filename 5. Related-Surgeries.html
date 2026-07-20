@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/pages/components/styles_components.css">
-    <link rel="stylesheet" href="/css files/before-surgery-styling.css">
-    <link rel="stylesheet" href="/css files/after-surgery-styling.css">
+    <link rel="stylesheet" href="css_files/styles_components.css">
+    <link rel="stylesheet" href="css_files/before-surgery-styling.css">
+    <link rel="stylesheet" href="css_files/after-surgery-styling.css">
     <link rel="icon" href="images/favicon.png">
-    <script defer src="JS files/include.js"></script>
+    <script defer src="JS_files/include.js"></script>
     <title>Related Surgeries</title>
 </head>
 
 <body>
-    <div data-include="/pages/components/header.html"></div>
+    <div data-include="header.html"></div>
     <div class="menu">
-        <div data-include="/pages/components/menu.html"></div>
+        <div data-include="menu.html"></div>
     </div>
 
 
@@ -24,7 +24,7 @@
 
             <div class="page-titles-container breadcrumb-container">
                 <ul class="breadcrumb">
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a>Related Surgeries</a></li>
                 </ul>
             </div>
@@ -60,7 +60,17 @@
                 </div>
             </div>
 
-            <div class="paragraph-section hysto-intro">
+            <div class="paragraph-section hysto-intro" style="margin-top: 10px; width: 70%">
+                <div class="content-section">
+                    <div class="content-item" style="width: 70%">
+                        <p>Depending on your goals, you may want or need to receive other surgeries before, after, or
+                            alongside meta. Some of those surgeries are explained here.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paragraph-section">
                 <h2 id="hysterectomy">Hysterectomy</h2>
 
                 <div class="content-section">
@@ -79,12 +89,12 @@
                 <div class="captioned-image related-surgeries">
                     <p>Before hysterectomy:</p>
                     <!--yes the files are named wrong ignore it-->
-                    <img src="/images/related-surgeries/post_hysto_labels001.jpg" alt="pelvis before hysterectomy" />
+                    <img src="images/related-surgeries/post_hysto_labels001.jpg" alt="pelvis before hysterectomy" />
                 </div>
 
                 <div class="captioned-image related-surgeries">
                     <p>After hysterectomy:</p>
-                    <img src="/images/related-surgeries/pre_hysto_labels001.jpg"
+                    <img src="images/related-surgeries/pre_hysto_labels001.jpg"
                         alt="pelvis after hysterectomy with dotted outline of uterus" />
                 </div>
             </div>
@@ -183,13 +193,13 @@
             <div class="paragraph-section before-after">
                 <div class="captioned-image related-surgeries">
                     <p>Before monplasty:</p>
-                    <img src="/images/related-surgeries/pre_mons003.jpg"
+                    <img src="images/related-surgeries/pre_mons003.jpg"
                         alt="lower abdomen and pelvis with fat overhanging the penis" />
                 </div>
 
                 <div class="captioned-image related-surgeries">
                     <p>After monsplasty:</p>
-                    <img src="/images/related-surgeries/post_mons003.jpg"
+                    <img src="images/related-surgeries/post_mons003.jpg"
                         alt="lower abdomen and pelvis with a reduced amount of fat and more visible penis" />
                 </div>
             </div>
@@ -226,15 +236,15 @@
             <div class="paragraph-section before-after">
                 <div class="captioned-image related-surgeries">
                     <p>Without implants:</p>
-                    <img src="/images/related-surgeries/no_implants001.jpg" alt="scrotum without implants" />
-                    <img src="/images/related-surgeries/no_implants_sag001.jpg"
+                    <img src="images/related-surgeries/no_implants001.jpg" alt="scrotum without implants" />
+                    <img src="images/related-surgeries/no_implants_sag001.jpg"
                         alt="pelvis including scrotum without implants" />
                 </div>
 
                 <div class="captioned-image related-surgeries">
                     <p>With implants:</p>
-                    <img src="/images/related-surgeries/implants_not_visible.jpg" alt="scrotum with implants" />
-                    <img src="/images/related-surgeries/implants_sag001.jpg"
+                    <img src="images/related-surgeries/implants_not_visible.jpg" alt="scrotum with implants" />
+                    <img src="images/related-surgeries/implants_sag001.jpg"
                         alt="pelvis including scrotum with implants" />
                 </div>
             </div>
@@ -251,7 +261,7 @@
                         <p>If you have testicular implants, there is a risk of an additional complication: extrusion
                             of
                             implants, or the movement of implants out of their place in the scrotum. See the
-                            <a href="/pages/4. After Surgery/B. Complications.html">Complications</a> page for more
+                            <a href="B. Complications.html">Complications</a> page for more
                             information.
                         </p>
                     </div>
@@ -281,12 +291,13 @@
 
             <div class="paragraph-section before-after">
                 <div class="captioned-image related-surgeries">
-                    <img src="/images/related-surgeries/implants_not_visible.jpg" alt="post-op rotational scrotoplasty" />
+                    <img src="images/related-surgeries/implants_not_visible.jpg"
+                        alt="post-op rotational scrotoplasty" />
                     <p>Rotational scrotoplasty</p>
                 </div>
 
                 <div class="captioned-image related-surgeries">
-                    <img src="/images/related-surgeries/bifid001.jpg" alt="post-op bifid scrotoplasty" />
+                    <img src="images/related-surgeries/bifid001.jpg" alt="post-op bifid scrotoplasty" />
                     <p>Bifid scrotoplasty</p>
                 </div>
             </div>
@@ -408,8 +419,8 @@
     </div>
 
 
-    <div data-include="/pages/components/footer.html"></div>
-    <script src="/JS files/include.js"></script>
+    <div data-include="footer.html"></div>
+    <script src="JS_files/include.js"></script>
 </body>
 
 </html>
