@@ -23,7 +23,7 @@
     font-family: Nunito;
     font-weight: bold;
     font-style: normal;
-    src: url(/images/Nunito/static/Nunito-Bold.ttf);
+    src: url(../images/Nunito/static/Nunito-Bold.ttf);
 }
 
 /* SS Comment: Clamp horizontal overflow so two-finger side-scrolling cannot reveal blank columns. */
