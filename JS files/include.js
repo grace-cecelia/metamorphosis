@@ -21,14 +21,16 @@ async function loadIncludes() {
 
 function setActiveNav() {
   // 1) Get the current page from the URL path.
-  // GOT RID OF THIS 1016 Example: /pages/about.html -> about.html
-  let currentPage = window.location.pathname;
+  // Example: /pages/about.html -> about.html
+  let currentPage = window.location.pathname.split("/").pop();
 
   // If there is no file name in the path, treat it as index.html
   if (!currentPage) {
     currentPage = "index.html";
   }
 
+  // Remove any query string (?x=1) or hash (#section), just in case
+  currentPage = currentPage.split("?")[0].split("#")[0];
 
   // 2) Get all links in the navigation
   const links = document.querySelectorAll(".nav-links");
@@ -38,7 +40,12 @@ function setActiveNav() {
     // Get the link target from href
     const href = link.getAttribute("href") || "";
 
-    let linkPage = href || "";
+    // Example: ../pages/about.html -> about.html
+    let linkPage = href.split("/").pop() || "";
+
+    // Remove query/hash from the link too
+    linkPage = linkPage.split("?")[0].split("#")[0];
+    console.log(linkPage);
 
     // Clear old active states first
     link.classList.remove("active");
