@@ -94,15 +94,15 @@ function updateImage() {
     const innerImg = document.getElementById("inner-view-image");
     const frontImg = document.getElementById("front-view-image");
 
-    innerImg.src = `../images/boys-tool-illustrations/inner/${fileName}`;
-    frontImg.src = `../images/boys-tool-illustrations/front/${fileName}`;
+    innerImg.src = `images/boys-tool-illustrations/inner/${fileName}`;
+    frontImg.src = `images/boys-tool-illustrations/front/${fileName}`;
 
     console.log("new inner src:", innerImg.src);
     console.log("new front src:", frontImg.src);
 
     if (innerImg && frontImg) {
-        innerImg.src = `../images/boys-tool-illustrations/inner/${fileName}`;
-        frontImg.src = `../images/boys-tool-illustrations/front/${fileName}`;
+        innerImg.src = `images/boys-tool-illustrations/inner/${fileName}`;
+        frontImg.src = `images/boys-tool-illustrations/front/${fileName}`;
 
         console.log("New inner src:", innerImg.src);
         console.log("New front src:", frontImg.src);
