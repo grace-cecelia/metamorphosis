@@ -19,7 +19,7 @@ async function loadIncludes() {
   }
 }
 
-/*  function setActiveNav() {
+function setActiveNav() {
   // 1) Get the current page from the URL path.
   // Example: /pages/about.html -> about.html
   let currentPage = window.location.pathname.split("/").pop();
@@ -55,7 +55,7 @@ async function loadIncludes() {
       link.classList.add("active");
     }
   });
-} */
+}
 
 function updateStickyHeaderOffset() {
   // SS Comment: Measure current header height and sync CSS sticky offset for the menu control row.
