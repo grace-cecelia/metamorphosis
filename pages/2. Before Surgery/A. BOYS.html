@@ -9,23 +9,9 @@
     <link rel="stylesheet" href="pages/components/styles_components.css">
     <link rel="icon" href="images/favicon.png">
     <title>Build-Out-Your-Surgery</title>
-
-    <script src="/JS_files/include.js"></script>
-    <script src="./JS_files/include.js"></script>
-    <script src="../JS_files/include.js"></script>
-    <script src="JS_files/include.js"></script>
-    <script src="JS%20files/include.js"></script>
-    <script src="/JS%20files/include.js"></script>
-    <script src="/include.js"></script>
-    <script src="include.js"></script>
-    <script src="metamorphosis/JS files/include.js"></script>
-    <script src="/metamorphosis/JS files/include.js"></script>
-
-
-    <script src="JS%20files/boys-tool.js"></script>
-    <script src="JS files/image-viewer.js"></script>
 </head>
 
+committed changes are up to date as of 12:03PM
 
 <body>
     <div data-include="pages/components/header.html"></div>
@@ -38,7 +24,7 @@
 
             <div class="page-titles-container breadcrumb-container">
                 <ul class="breadcrumb">
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="1.%20FAQ-before.html">Before Surgery</a></li>
                     <li><a>Build Out Your Surgery (BOYS)</a></li>
                 </ul>
@@ -66,7 +52,7 @@
                         using
                         it. If you don’t already have some background knowledge, you might find it helpful to read
                         the
-                        <a href="pages/1.%20Metoidioplasty%20Overview.html">Overview</a> first.
+                        <a href="1.%20Metoidioplasty%20Overview.html">Overview</a> first.
                     </p>
                 </div>
 
@@ -534,66 +520,7 @@
             </div>
 
             <button onclick="topFunction()" id="scroll-top" title="Go to top" class="scroll-top-btn">↑</button>
-
-            <script>
-                async function loadIncludes() {
-                    // Find every element that has a data-include attribute
-                    const targets = document.querySelectorAll("[data-include]");
-
-                    for (const el of targets) {
-                        // Get the file path from the data-include attribute
-                        const filePath = el.getAttribute("data-include");
-
-                        // Ask the browser to fetch (load) that file
-                        const response = await fetch(filePath);
-
-                        // Turn the response into text (HTML code)
-                        const html = await response.text();
-
-                        // Put the HTML inside this element
-                        el.innerHTML = html;
-                    }
-                }
-
-                function setActiveNav() {
-                    // 1) Get the current page from the URL path.
-                    // Example: /pages/about.html -> about.html
-                    let currentPage = window.location.pathname.split("/").pop();
-
-                    // If there is no file name in the path, treat it as index.html
-                    if (!currentPage) {
-                        currentPage = "index.html";
-                    }
-
-                    // Remove any query string (?x=1) or hash (#section), just in case
-                    currentPage = currentPage.split("?")[0].split("#")[0];
-
-                    // 2) Get all links in the navigation
-                    const links = document.querySelectorAll(".nav-links");
-
-                    // 3) Compare each link file name with the current page
-                    links.forEach((link) => {
-                        // Get the link target from href
-                        const href = link.getAttribute("href") || "";
-
-                        // Example: ../pages/about.html -> about.html
-                        let linkPage = href.split("/").pop() || "";
-
-                        // Remove query/hash from the link too
-                        linkPage = linkPage.split("?")[0].split("#")[0];
-                        console.log(linkPage);
-
-                        // Clear old active states first
-                        link.classList.remove("active");
-
-                        // If this link matches the current page, highlight it
-                        if (linkPage === currentPage) {
-                            link.classList.add("active");
-                        }
-                    });
-                }
-            </script>
-
+            
 
         </main>
     </div>
@@ -601,7 +528,17 @@
 
     <div data-include="pages/components/footer.html"></div>
 
+    <script src="/JS_files/boys-tool.js"></script>
+    <script src="JS_files/boys-tool.js"></script>
+    <script src="/JS%20files/boys-tool.js"></script>
+    <script src="JS%20files/boys-tool.js"></script>
+    <script src="/metamorphosis/JS%20files/boys-tool.js"></script>
+    <script src="metamorphosis/JS%20files/boys-tool.js"></script>
+    <script src="/metamorphosis/JS_files/boys-tool.js"></script>
+    <script src="metamorphosis/JS_files/boys-tool.js"></script>
 
+    <script src="JS%20files/include.js"></script>
+    <script src="JS%20files/boys-tool.js"></script>
 </body>
 
 </html>
