@@ -115,7 +115,7 @@ function updateImage() {
     updateLabels();
 }
 
-// just trying to get this god damn file to update 
+// just trying to get this god damn file to update please
 
 //--------------------------------------------------------------------------------------------------
 // skin tone button functions
