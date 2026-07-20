@@ -629,10 +629,10 @@ a.nav-links.active::after {
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-    <<<<<<< HEAD transition: none;
-    =======transition: margin-left .5s;
+    transition: none;
+    /* transition: margin-left .5s; */
     padding: 10px;
-    >>>>>>>60def21c6b3fc282e0135606328c196263857cff margin-top: 0;
+    margin-top: 0;
     margin-left: calc(var(--desktop-menu-width) + 6vw);
     margin-right: 6vw;
     margin-bottom: 15vh;
@@ -1323,9 +1323,11 @@ img.complications-image.intro-image {
     display: flex;
     gap: 50px;
     height: fit-content;
-    margin: 20px;
     margin-top: 40px;
     z-index: 1;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
 }
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -1335,25 +1337,20 @@ img.complications-image.intro-image {
     --gap: 16px;
     --num-cols: 2;
     --num-rows: 2;
-    --row-width: 300px;
-    --row-height: 150px;
-
-    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-template-rows: repeat(var(--num-rows), 1fr);
     gap: var(--gap);
-    width: 77%;
     z-index: 1;
-    height: 400px;
+    height: 250px;
+    width: 400px;
     align-self: flex-start;
 }
 
 
 .lab-gallery img {
-    width: 60%;
+    height: 100px;
     object-fit: cover;
-    padding: 15px;
     border: var(--border-style);
     margin-top: 15px;
 }
@@ -1367,7 +1364,7 @@ img.complications-image.intro-image {
     text-align: center;
     filter: drop-shadow(0px 6px 4px grey);
     z-index: 1;
-    height: 95%;
+    height: 155px;
     padding-bottom: 8px;
 }
 
@@ -1380,8 +1377,8 @@ img.complications-image.intro-image {
     filter: drop-shadow(0px 6px 4px grey);
     z-index: 1;
     padding-bottom: 60px;
-    height: 400px;
-    width: 700px;
+    height: 260px;
+    width: 400px;
 }
 
 .boys-button h2 {
@@ -1389,15 +1386,13 @@ img.complications-image.intro-image {
 }
 
 .boys-sketch-icon {
-    padding: 15px;
+    padding: 30px 15px 15px 15px;
     object-fit: cover;
-    width: 80%;
-    margin-top: 60px;
-    margin-bottom: 10px;
+    width: 300px;
 }
 
 .boys-sketch-icon img {
-    width: 80%;
+    width: 200px;
     margin-top: 20px;
 }
 
@@ -1419,13 +1414,6 @@ img.complications-image.intro-image {
     grid-row: span 2;
 }
 
-.home-page {
-    display: flex;
-    /* SS Comment: Center the gallery container after removing the broken side image block. */
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-}
 
 
 /* Responsive homepage content styling */
@@ -1463,6 +1451,75 @@ img.complications-image.intro-image {
         width: 100%;
     }
 }
+
+@media (min-width: 1500px) {
+    .home-page {
+    display: flex;
+    gap: 50px;
+    height: fit-content;
+    margin-top: 40px;
+    z-index: 1;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.home-page .lab-gallery {
+    --gap: 16px;
+    --num-cols: 2;
+    --num-rows: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-template-rows: repeat(var(--num-rows), 1fr);
+    gap: var(--gap);
+    z-index: 1;
+    height: 250px;
+    width: 400px;
+    align-self: flex-start;
+}
+
+
+.lab-gallery img {
+    height: 140px;
+    object-fit: cover;
+    border: var(--border-style);
+    margin-top: 15px;
+}
+
+.home-gallery-button {
+    height: 200px;
+    width: 228px;
+    padding-bottom: 8px;
+}
+
+/* large boys tool button */
+.boys-button {
+    padding-bottom: 60px;
+    height: 350px;
+    width: 500px;
+}
+
+.boys-button h2 {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.boys-sketch-icon {
+    padding: 50px 15px 30px 15px;
+    width: 400px;
+}
+
+.boys-sketch-icon img {
+    width: 400px;
+    margin-top: 20px;
+}
+
+.home-gallery-button p {
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+}
+
 
 /* ----------------------------------------------------------------------------------------------- */
 
