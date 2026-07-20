@@ -16,7 +16,6 @@
     --sticky-header-offset: 88px;
     --desktop-menu-width: 200px;
     --mobile-menu-row-height: 56px;
-
 }
 
 @font-face {
@@ -38,6 +37,7 @@ h1 {
     color: var(--dark-green);
     margin-bottom: 10px;
     margin-top: 30px;
+    left: 0px;
 }
 
 h2 {
@@ -167,6 +167,7 @@ div.title-column.boys-page-title {
     margin-top: 5px;
     margin-bottom: 5px;
     line-height: 1.1;
+    left: 0px;
 }
 
 .summary-box-test {
@@ -1046,6 +1047,7 @@ br.indent {
 
 .paragraph-section h1 {
     margin-bottom: 10px;
+    left: 0px;
 }
 
 .paragraph-section h2 {
