@@ -1,0 +1,1295 @@
+/* new BOYS tool stylesheet */
+
+div.paragraph-section.boys-intro {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* skin tones */
+.swatch.light {
+    background: #ebdbd7;
+}
+
+.swatch.olive {
+    background: #d3af87;
+}
+
+.swatch.medium {
+    background: #814f34;
+}
+
+.swatch.dark {
+    background: #5b340f;
+}
+
+.swatches {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.swatch {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    /* Needed for checkmark */
+    transition: all 0.3s ease;
+}
+
+.swatch:hover {
+    transform: scale(1.05);
+}
+
+
+/*rectangle around module */
+.boys-container {
+    width: fit-content;
+    height: fit-content;
+    inline-size: fit-content;
+    block-size: fit-content;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/fit-content */
+    border: none;
+    border-radius: 10px;
+    fill: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 900px) {
+    .boys-container {
+        display: none;
+    }
+}
+
+/* title styling */
+.boys-container h1 {
+    font-weight: 100;
+}
+
+/* all options styling */
+.selection-options {
+    display: inline-flex;
+    gap: 2vw;
+    margin: 0 auto;
+    padding-top: 5vh;
+    align-self: center;
+    align-items: center;
+}
+
+/* procedure options styling */
+.procedure-options {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: flex-start;
+    gap: 10px;
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    padding: 10px;
+    height: 92px;
+    width: fit-content;
+    background-color: white;
+    filter: drop-shadow(1px 1px 1px grey);
+}
+
+.dark-mode .procedure-options {
+    background-color: var(--dark-green);
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    border: none;
+    color: white;
+}
+
+/* container around all procedure lines 
+.all-procedures-container {
+    columns: 2;
+    text-align: left;
+    gap: 0px;
+}*/
+
+.procedures-form {
+    width: 275px;
+    columns: 2;
+    text-align: left;
+    gap: 0px;
+    flex-shrink: 0;
+}
+
+/* options in two rows for smaller windows */
+@media (max-width: 900px) {
+    .selection-options {
+        --gap: 16px;
+        --num-cols: 2;
+        --num-rows: 2;
+        --row-width: 300px;
+        box-sizing: border-box;
+        padding: var(--gap);
+        display: grid;
+        grid-template-columns: repeat(var(--num-cols), 1fr);
+        grid-template-rows: repeat(var(--num-rows), 1fr);
+        gap: var(--gap);
+        width: min(100%, 760px);
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        align-self: center;
+    }
+}
+
+/* titles larger, bold, green */
+.boys-titles {
+    font-weight: 600;
+    font-size: 16px;
+    color: #364b47;
+    flex-shrink: 0;
+}
+
+.dark-mode .boys-titles {
+    color: white;
+}
+
+/* images titles slightly larger */
+.boys-image-titles {
+    font-weight: 600;
+    font-size: 18px;
+    color: #364b47;
+    flex-shrink: 0;
+}
+
+.dark-mode .boys-image-titles {
+    color: var(--light-green);
+}
+
+/* each procedure individually styling */
+.procedure-line {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    gap: 10px;
+    align-self: stretch;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    width: fit-content;
+}
+
+/* reset default checkbox styling */
+.procedure-line input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* custom checkbox styling */
+.procedure-checkbox {
+    border: 2px solid rgb(194, 194, 194);
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* grey out simple checkbox */
+span.procedure-checkbox.simple {
+    background-color: var(--light-grey);
+}
+
+.dark-mode span.procedure-checkbox.simple {
+    background-color: #4b4b4b;
+}
+
+.procedure-names {
+    font-size: 14px;
+    align-items: center;
+    padding-top: 1.5px;
+}
+
+
+.procedure-line:hover input~.procedure-checkbox {
+    background-color: #ccc;
+}
+
+.dark-mode .procedure-line:hover input~.procedure-checkbox {
+    background-color: #4b4b4b;
+}
+
+.procedure-line input:checked~.procedure-checkbox {
+    background-color: white;
+}
+
+.dark-mode .procedure-line input:checked~.procedure-checkbox {
+    background-color: var(--dark-green);
+}
+
+.procedure-line input:checked~.procedure-checkbox.simple {
+    background-color: rgb(222, 222, 222);
+}
+
+.dark-mode .procedure-line input:checked~.procedure-checkbox.simple {
+    background-color: #777777;
+}
+
+/* create checkmark (hidden when not checked) */
+.procedure-checkbox:after {
+    content: "✔";
+    display: none;
+    color: var(--dark-green);
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.dark-mode .procedure-checkbox:after {
+    color: white;
+}
+
+/* show checkmark when checked */
+.procedure-line input:checked~.procedure-checkbox:after {
+    display: block;
+}
+
+/* checkmark appearance */
+.procedure-line .procedure-checkbox:after {
+    height: 5px;
+    width: 5px;
+    vertical-align: middle;
+    transform: translateX(2px) translateY(-2.7px);
+}
+
+/* skin tone buttons container */
+.skin-tone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    padding-top: 18px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 92px;
+    background-color: white;
+    filter: drop-shadow(1px 1px 1px grey);
+}
+
+.dark-mode .skin-tone-container {
+    background-color: var(--dark-green);
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    border: none;
+    color: white;
+}
+
+/* styling for all skin tone buttons collectively - old buttons, replaced with checkboxes */
+.skin-tone-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+}
+
+
+/* styling for individual skin tone button */
+.skin-tone-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .skin-tone-button {
+    border: 1px solid white;
+}
+
+.skin-tone-button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .skin-tone-container {
+        border: none;
+        border-radius: 0px;
+        border-bottom: solid 1.5px var(--light-grey);
+        text-align: left;
+    }
+
+    .skin-tone-buttons {
+        position: relative;
+        align-self: left;
+        text-align: left;
+    }
+}
+
+/* body size buttons container */
+.body-size-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    padding: 18px 15px 0px 15px;
+    height: 92px;
+    width: fit-content;
+    position: relative;
+    flex-shrink: 0;
+    background-color: white;
+    filter: drop-shadow(1px 1px 1px grey);
+}
+
+.dark-mode .body-size-container {
+    background-color: var(--dark-green);
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    border: none;
+    color: white;
+}
+
+
+/* styling for all body size buttons collectively */
+.body-size-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+}
+
+/* styling for individual body size button */
+.body-size-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    color: white;
+    transition: all 0.3s ease;
+    background-color: #814f34;
+}
+
+
+.dark-mode .body-size-button {
+    border: 1px solid white;
+}
+
+.body-size-button:hover {
+    transform: scale(1.05);
+}
+
+/* blur button and labels toggle */
+.button-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    margin-top: 10px;
+    ;
+    padding-top: 5vh;
+    margin-bottom: auto;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+@media (max-width: 900px) {
+    .button-controls {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+}
+
+
+/* active button styling */
+button.skin-tone-button.active::after {
+    content: "✔";
+    color: white;
+}
+
+button.body-size-button.active::after {
+    content: "✔";
+    color: white;
+}
+
+.body-size-button.active {
+    background-color: #814f34;
+}
+
+@media (max-width: 900px) {
+    .body-size-container {
+        border: none;
+        border-radius: 0px;
+        text-align: left;
+        height: fit-content;
+    }
+
+    .body-size-buttons {
+        position: relative;
+        align-self: left;
+    }
+}
+
+/* blur button */
+.blur-button-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 110px;
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    font: var(--body-text);
+    flex-shrink: 0;
+    background-color: white;
+    filter: drop-shadow(1px 1px 1px grey);
+}
+
+.dark-mode .blur-button-container {
+    background-color: var(--dark-green);
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    border: none;
+    color: white;
+}
+
+.blur-button-container img {
+    width: 20px;
+    height: auto;
+}
+
+.blur-button-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: var(--body-text);
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.dark-mode .blur-button-container button {
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* Mobile menu design */
+@media (max-width: 900px) {
+    .selection-options {
+        --gap: 16px;
+        --num-cols: 2;
+        --num-rows: 2;
+        --row-width: 300px;
+        box-sizing: border-box;
+        padding: var(--gap);
+        display: grid;
+        grid-template-columns: repeat(var(--num-cols), 1fr);
+        grid-template-rows: repeat(var(--num-rows), 1fr);
+        width: min(100%, 760px);
+        height: 20vh;
+        margin-right: 40px;
+        align-items: flex-start;
+        text-align: left;
+        align-content: right;
+        align-self: flex-start;
+        position: relative;
+        border: none;
+        border-radius: 0px;
+        background-color: white;
+    }
+
+    .collapsible-menu {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        border: 2px solid rgb(212, 212, 212);
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 10;
+        background-color: white;
+        filter: drop-shadow(1px 1px 1px grey);
+    }
+
+    /* button to open menu */
+    .collapsible-header {
+        display: flex;
+        align-items: right;
+        padding: 10px 15px;
+        background-color: #ffffff;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .collapsible-header h3 {
+        margin: 0;
+        font-size: 16px;
+        color: #364b47;
+        font-weight: 600;
+        justify-content: space-between;
+        padding-right: 10%;
+    }
+
+    .collapsible-header.active::after h3 {
+        justify-content: space-between;
+        padding-right: 10%;
+    }
+
+    .arrow {
+        transition: transform 0.3s ease;
+        font-size: 12px;
+        text-align: right;
+        padding-top: 2px;
+    }
+
+    .collapsible-content {
+        display: none;
+        padding: 10px 0;
+        background-color: white;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 20;
+        position: relative;
+        margin-top: 0;
+    }
+
+    .collapsible-content.active {
+        display: block;
+        position: relative;
+        transform: translateY(0);
+        z-index: 20;
+        margin-top: -1px;
+        overflow: visible;
+        margin-bottom: 0px;
+        background-color: white;
+        right: 0;
+        align-items: right;
+        gap: 40%;
+    }
+
+    .collapsible-content.active::after {
+        content: "";
+        width: 0;
+        align-items: right;
+    }
+
+    /* Ensure arrow rotates when active */
+    .collapsible-header.active .arrow {
+        transform: rotate(180deg);
+        content: '';
+        right: 0;
+        align-items: right;
+    }
+
+    div.collapsible-header.active::after {
+        width: 0;
+        content: '';
+        align-items: right;
+    }
+
+    /* Adjust procedure form for mobile */
+    .procedures-form {
+        width: 100%;
+        columns: 1;
+        text-align: left;
+        gap: 5px;
+        flex-shrink: 0;
+        padding: 0 10px;
+    }
+
+    /* Adjust procedure lines for mobile */
+    .procedure-line {
+        width: 100%;
+        padding: 8px 0;
+        margin-bottom: 5px;
+    }
+
+    .procedure-names {
+        font-size: 14px;
+        padding-top: 0;
+    }
+
+    /* Adjust other containers for mobile */
+    .procedure-options {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        border: none;
+        border-bottom: 1.5px solid var(--light-grey);
+        border-radius: 0px;
+        height: fit-content;
+    }
+
+    .skin-tone-container,
+    .body-size-container {
+        width: 80%;
+        max-width: 300px;
+        margin: 10px auto;
+        height: fit-content;
+    }
+}
+
+.desktop-menu-only {
+    margin: 0 auto;
+}
+
+/* only show correct menu for screen width */
+@media (max-width: 900px) {
+    .mobile-menu-only {
+        display: block;
+        margin: auto;
+    }
+
+    .desktop-menu-only {
+        display: none;
+    }
+}
+
+@media (min-width: 901px) {
+    .mobile-menu-only {
+        display: none;
+    }
+
+    .desktop-menu-only {
+        display: flex;
+        gap: 15px;
+    }
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+/* overall container for boys tool images */
+.boys-images-container {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+/* container for image and labels */
+.labeled-image-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    text-align: center;
+    color: white;
+    width: fit-content;
+}
+
+@media (max-width: 900px) {
+    .boys-images-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    div.boys-tool-illustration.blurred-image {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .boys-images-container img {
+        width: 100%;
+    }
+
+    .inner-view-container img {
+        width: 100%;
+    }
+
+    .labeled-image-container {
+        width: fit-content;
+        margin-left: 0px;
+        align-items: left;
+        align-content: left;
+        text-align: left;
+    }
+
+    .labeled-image-container img {
+        width: fit-content;
+        margin-left: 0px;
+        align-items: left;
+        align-self: left;
+        align-content: left;
+    }
+
+    img#front-view-image {
+        width: 80%;
+        height: auto;
+    }
+
+    img#inner-view-image {
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: 0px;
+        margin-bottom: 50px;
+        text-align: left;
+        float: none;
+        align-self: left;
+        align-content: left;
+        align-items: left;
+    }
+}
+
+/* boys tool illustration styling */
+.boys-tool-illustration img {
+    width: auto;
+    height: 300px;
+    border: 2px solid rgb(212, 212, 212);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.dark-mode .boys-tool-illustration img {
+    border: none;
+    background-color: white;
+}
+
+/* all image elements alignment */
+.inner-view-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.front-view-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+
+/* title and download button styling */
+.inner-view-text {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.front-view-text {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+/* download button styling */
+.inner-view-text img {
+    width: 25px;
+    height: auto;
+}
+
+.inner-view-text button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.front-view-text img {
+    width: 25px;
+    height: auto;
+}
+
+.front-view-text button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* text and labels toggle inner view alignment */
+.inner-view-text-toggle {
+    display: flex;
+    width: fit-content;
+    gap: 85px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.boys-toggle-container {
+    display: flex;
+    gap: 0px;
+    border: none;
+    border-radius: 10px;
+    flex-shrink: 0;
+    align-items: center;
+    width: 110px;
+    text-align: center;
+    padding-left: 18.5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boys-toggle-container p {
+    font-size: 14px;
+    color: black;
+}
+
+.boys-toggle-items {
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+/* styling checkbox into labels toggle class="labels-toggle" span class="slider round" */
+
+/* The switch - the box around the slider */
+.labels-toggle {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 23px;
+}
+
+/* Hide default checkbox */
+.labels-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--mid-green);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #627773;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #757b80;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(65px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.slider:after {
+    content: 'NO LABELS';
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 61%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+span.slider.round::after {
+    width: 70px;
+}
+
+input:checked+.slider:after {
+    content: 'LABELS';
+    left: 30%;
+}
+
+/* edit for universal changes to labels */
+.boys-labels-all {
+    position: absolute;
+    color: white;
+    background: #627773;
+    padding: 5px;
+    border-radius: 4px;
+    border: .5px solid white;
+    font: var(--body-text);
+    font-size: 12px;
+    margin-left: 20px;
+    z-index: 2;
+}
+
+.labels-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    z-index: 2;
+}
+
+.left-triangle {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;
+    float: left;
+    padding-right: 10px;
+    margin-top: 3px;
+    z-index: 1;
+}
+
+.right-triangle {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid white;
+    position: absolute;
+    margin-top: 3px;
+    padding-left: 7px;
+    margin-left: 61.5px;
+    z-index: 1;
+}
+
+
+/* Hide labels for toggle */
+.boys-labels-class {
+    display: none;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* simple labels
+/* penis label */
+.simple-labels div.boys-label-container.phallus-text {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    bottom: 45%;
+    left: -3%;
+}
+
+/* Urethra label */
+.simple-labels div.boys-label-container.urethra-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 52%;
+    left: 40%;
+}
+
+/* Vagina label */
+.simple-labels div.boys-label-container.vagina-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 50%;
+    right: 44%;
+}
+
+.simple-labels div.boys-label-container.bladder-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 32%;
+    left: 45%;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* simple + scrotoplasty labels
+/* penis label */
+.simple-scroto-labels div.boys-label-container.phallus-text {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    bottom: 45%;
+    left: -3%;
+}
+
+/* Urethra label */
+.simple-scroto-labels div.boys-label-container.urethra-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 52%;
+    left: 40%;
+}
+
+/* Scrotum label */
+.simple-scroto-labels div.scrotum-text.boys-label-container {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+/* Vagina label */
+.simple-scroto-labels div.boys-label-container.vagina-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 50%;
+    right: 44%;
+}
+
+/* bladder label */
+.simple-scroto-labels div.boys-label-container.bladder-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 32%;
+    left: 45%;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* simple meta + vnectomy labels
+/* penis label */
+.simple-vnect-labels div.boys-label-container.phallus-text {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    bottom: 45%;
+    left: -3%;
+}
+
+/* Urethra label */
+.simple-vnect-labels div.boys-label-container.urethra-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 52%;
+    left: 40%;
+}
+
+/* Vagina label */
+.simple-vnect-labels div.boys-label-container.vagina-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 50%;
+    right: 44%;
+}
+
+.simple-vnect-labels div.boys-label-container.vagina-text .boys-labels-all {
+    width: 90px;
+}
+
+/* bladder label */
+.simple-vnect-labels div.boys-label-container.bladder-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 32%;
+    left: 45%;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* simple meta + vnectomy + scrotoplasty labels
+/* penis label */
+.simple-vnect-scroto-labels div.boys-label-container.phallus-text {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    bottom: 45%;
+    left: -3%;
+}
+
+/* Urethra label */
+.simple-vnect-scroto-labels div.boys-label-container.urethra-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 52%;
+    left: 40%;
+}
+
+/* Scrotum label */
+.simple-vnect-scroto-labels div.scrotum-text.boys-label-container {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+/* Vagina label */
+.simple-vnect-scroto-labels div.boys-label-container.vagina-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 50%;
+    right: 44%;
+}
+
+.simple-vnect-scroto-labels div.boys-label-container.vagina-text .boys-labels-all {
+    width: 90px;
+}
+
+/* Bladder label */
+.simple-vnect-scroto-labels div.boys-label-container.bladder-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 32%;
+    left: 45%;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* simple + vnect + ul labels */
+/* penis label */
+.simple-vnect-ul-labels div.boys-label-container.phallus-text {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    bottom: 45%;
+    left: -3%;
+}
+
+/* Urethra label */
+.simple-vnect-ul-labels div.boys-label-container.urethra-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 51%;
+    left: 40%;
+}
+
+/* Vagina label */
+.simple-vnect-ul-labels div.boys-label-container.vagina-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 50%;
+    right: 44%;
+}
+
+.simple-vnect-ul-labels div.boys-label-container.vagina-text .boys-labels-all {
+    width: 90px;
+}
+
+/* Bladder label */
+.simple-vnect-ul-labels div.boys-label-container.bladder-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 32%;
+    left: 45%;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* full meta labels */
+/* penis label */
+.full-meta-labels div.boys-label-container.phallus-text {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    bottom: 45%;
+    left: -3%;
+}
+
+/* Urethra label */
+.full-meta-labels div.boys-label-container.urethra-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 51%;
+    left: 40%;
+}
+
+/* Scrotum label */
+.full-meta-labels div.scrotum-text.boys-label-container {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 60%;
+    left: 31%;
+}
+
+/* Vagina label */
+.full-meta-labels div.boys-label-container.vagina-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 50%;
+    right: 44%;
+}
+
+.full-meta-labels div.boys-label-container.vagina-text .boys-labels-all {
+    width: 90px;
+}
+
+/* Bladder label */
+.full-meta-labels div.boys-label-container.bladder-text {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 32%;
+    left: 45%;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+div.boys-labels-class.simple-vnect-ul-labels .labels-container.urethra-text {
+    top: 51%;
+    left: 26%;
+}
+
+div.boys-labels-class.full-meta-labels .labels-container.urethra-text {
+    top: 51%;
+    left: 26%;
+}
+
+/* blur added to images */
+.blurred-image {
+    filter: blur(10px) opacity(70%);
+}
+
+div.paragraph-section.boys-disclaimer {
+    margin-bottom: 0px;
+}
