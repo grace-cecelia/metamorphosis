@@ -1012,6 +1012,7 @@ hr {
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 15px;
+    filter: drop-shadow(1px 1px 1px grey);
 }
 
 .dark-mode .disclaimer-box {

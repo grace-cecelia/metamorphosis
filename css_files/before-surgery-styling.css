@@ -183,7 +183,7 @@ ul:nth-child(1) {
     background: #4d407c;
     color: #000;
     transition: all ease-in-out .3s;
-    cursor: pointer;
+    cursor: auto;
 }
 
 .surgery-timeline li:after {
@@ -196,23 +196,28 @@ ul:nth-child(1) {
     left: -50%;
     z-index: -999;
     transition: all ease-in-out .3s;
+    cursor: auto;
 }
 
 .surgery-timeline li:first-child:after {
     content: none;
+    cursor: auto;
 }
 
 .surgery-timeline li.active-tl {
     color: black;
+    cursor: auto;
 }
 
 .surgery-timeline li.active-tl:before {
     background: #4d407c;
     color: #F1F1F1;
+    cursor: auto;
 }
 
 .surgery-timeline li.active-tl+li:after {
     background: #4d407c;
+    cursor: auto;
 }
 
 @media (max-width:900px) {
@@ -297,9 +302,9 @@ div.surgery-questions.after-questions {
     margin: 0px;
 }
 
-/* div.general-image-container.prosthetic-images {
-    width:
-} */
+div.content-section.prosthetics {
+    margin-top: 20px;
+}
 
 ul.dysphoria-aid-list {
     color: black;
@@ -685,6 +690,7 @@ div.paragraph-section.consults-intro {
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 30px;
+    filter: drop-shadow(1px 1px 1px grey);
 }
 
 .content-section .consults-disclaimer p {
