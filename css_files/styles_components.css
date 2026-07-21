@@ -1052,7 +1052,7 @@ br.indent {
 }
 
 .paragraph-section h2 {
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     margin-top: 30px;
 }
 
@@ -1336,6 +1336,7 @@ div.content-image.options-pair img {
 
 .home-page {
     display: flex;
+    flex-direction: row-reverse;
     gap: 50px;
     height: fit-content;
     margin-top: 40px;
@@ -1622,7 +1623,7 @@ div.page-titles-container.breadcrumb-container ul.breadcrumb {
 /* overall collapsible menus styling */
 .goals-menu {
     margin-top: 10px;
-    margin-bottom: 65px;
+    margin-bottom: 30px;
     background-color: var(--light-grey);
     border-radius: 15px;
     width: 100%;
@@ -1710,7 +1711,7 @@ div.goals-menu.overview {
 }
 
 .questioning-person img {
-    width: 30%;
+    width: 20%;
     float: right;
     padding: 0px;
     margin: 0px;
@@ -1751,17 +1752,37 @@ div.paragraph-section.meta-v-phallo {
     .table-section {
         margin-left: 20px;
         margin-right: 20px;
+        display: none;
     }
 }
 
+
+
 .meta-phallo-table {
     display: table;
+    width: 100%;
+    margin: 0px auto 0px auto;
+    border-spacing: 0;
+    text-align: center;
+    background-color: var(--light-grey);
+    border-radius: 15px;
+    line-height: 1.4;
+}
+
+.meta-phallo-table tr.top-row th {
+    border-bottom: solid 2.5px rgb(62, 62, 62);
+    border-left: none;
+    border-top: none;
+    text-align: center;
+}
+
+.meta-phallo-table tr.top-row h2 {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 0px;
     margin-top: 0px;
-    margin-bottom: 30px;
-    border: solid 2px var(--light-grey);
-    padding: 10px;
-    border-collapse: collapse;
-    overflow: unset;
+    padding: 0 15px 0 15px;
+    color: white;
 }
 
 /* sticky table header  */
@@ -1774,55 +1795,116 @@ table.floatThead-table {
 tr.thead {
     position: sticky;
     top: 0px;
-    background: var(--light-green);
-    border-bottom: solid 2px var(--dark-green);
+    background: var(--dark-green);
+    border-bottom: solid 2.5px rgb(34, 34, 34);
+    border-radius: 15px;
 }
 
-.meta-phallo-table th.column-1 {
-    width: 200px;
+tr.thead.top-row {
+    border-radius: 15px;
 }
 
+.table-title-column {
+    text-align: left;
+    border-bottom: solid 0.5px rgb(62, 62, 62);
+}
+
+h2.section-name {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: white;
+    border-spacing: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.category-row {
+    border-spacing: 0;
+    background-color: white;
+}
+
+.meta-phallo-table tr.top-row th {
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    text-align: center;
+}
+
+.meta-phallo-table tr.top-row h2 {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    padding: 0 15px 0 15px;
+}
+
+.meta-phallo-table tr.thead th h2 {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 15px;
+}
+
+@media (max-width: 900px) {
+    .meta-phallo-table {
+        width: 100%;
+        font-size: 14px;
+        margin: 0px 0px 60px 0px;
+        padding: 5px;
+    }
+
+    .meta-phallo-table tr.top-row h2 {
+        padding: 0px 15px;
+        font-size: 16px;
+    }
+
+}
+
+.meta-phallo-table .column-1 {
+    box-sizing: border-box;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding: 15px 15px 15px 20px;
+}
+
+.meta-phallo-table .column-2 {
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    border-top: none;
+    border-bottom: solid 1px rgb(207, 207, 207);
+    text-align: center;
+}
+
+.meta-phallo-table .top-row .column-2 {
+    border-right: none;
+    border-left: none;
+    padding: 15px 20px 15px 20px;
+}
+
+.meta-phallo-table .column-4 {
+    padding: 15px 20px 15px 15px;
+    text-align: center;
+    border-left: none;
+}
+
+.meta-phallo-table .row-1 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
 
 .meta-phallo-table td {
-    padding: 10px;
-    border: solid 2px var(--light-grey);
-    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgb(207, 207, 207);
 }
 
-.meta-phallo-table th {
-    padding: 10px;
-    text-align: center;
-    font-style: normal;
-}
-
-.meta-phallo-table tr.thead {
-    border: solid 2px var(--dark-green);
-}
-
-td.title-column {
-    text-align: left;
-    width: 200px;
-}
-
-th.title-column {
-    text-align: left;
-    width: 200px;
-}
-
-.meta-phallo-table tr {
-    padding: 10px;
-    border: solid 2px var(--light-grey);
-}
-
-.meta-phallo-table br {
-    display: block;
-    content: "";
-    margin-top: 2px;
-}
-
-tr.category-row {
-    text-align: left;
-    font-style: normal;
+.meta-phallo-table .bottom-row {
+    padding-bottom: 25px;
+    border-bottom: none;
+    padding-top: 15px;
 }
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -1880,5 +1962,7 @@ tr.category-row {
 li {
     line-height: 1.5;
 }
+
+
 
 /* NOTE change the active and visited link text colors */

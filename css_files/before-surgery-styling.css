@@ -446,19 +446,39 @@ img.body-icon-small {
     float: right;
 }
 
-
-@media (max-width:900px) {
-    img.body-icon-small {
-        width: 20%;
-        float: right;
-        margin-left: 10px;
-        padding: 0 15px;
-    }
-}
-
 div.content-item.body-icon-container {
     width: 120%;
 }
+
+@media (max-width:1200px) and (min-width: 901px) {
+    div.content-item.body-icon-container img.body-icon-small {
+        width: 40%;
+        margin-right: 0px;
+        padding-right: 15px;
+        padding-top: 0px;
+
+    }
+
+    div.content-item.body-icon-container {
+        width: 100%;
+    }
+}
+
+@media (max-width:900px) {
+
+    div.content-item.body-icon-container .body-icon-small {
+        width: 70%;
+        padding: 0 15px;
+        text-align: center;
+        float: none;
+        margin: 0px auto;
+    }
+
+    div.content-item.body-image-container {
+        width: 30%;
+    }
+}
+
 
 .prepare-space-image {
     width: 30vw;
@@ -521,6 +541,12 @@ div.paragraph-section.recovery-room {
     margin-right: 0px;
 }
 
+@media (max-width: 900px) {
+    div.paragraph-section.recovery-room {
+        display: none;
+    }
+}
+
 .recovery-room .recovery-space-text {
     margin-left: 100px;
 }
@@ -554,8 +580,8 @@ div.paragraph-section.recovery-room {
     height: auto;
     text-align: center;
     z-index: 1;
-    margin-top: 50px;
     margin-left: 20px;
+    margin-bottom: 0px;
 }
 
 .recovery-space-image {
@@ -565,6 +591,7 @@ div.paragraph-section.recovery-room {
     max-width: 100%;
     height: auto;
     object-fit: fill;
+    margin-bottom: 0px;
 }
 
 /* common styling for all hotspots - don't edit except transform */
@@ -586,7 +613,6 @@ div.paragraph-section.recovery-room {
     padding: 10px 12px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
-    border: solid 1px #627773;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     font-size: 14px;
     line-height: 1.4;
@@ -611,12 +637,12 @@ div.paragraph-section.recovery-room {
 /* edit here for universal button (circle) change */
 .hotspot-button {
     position: relative;
-    width: 4vh;
-    height: 4vh;
+    width: 10px;
+    height: 14px;
     display: block;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 100px;
-    border: 3px solid rgb(216, 99, 119);
+    border: 3px solid white;
     filter: drop-shadow(0px 0px 2px white);
     z-index: 1;
 }
@@ -633,39 +659,204 @@ div.paragraph-section.recovery-room {
 
 /* hotspots - only have to change position; all other styling inherited */
 .laptop-hotspot {
-    left: 25%;
-    top: 55%;
+    left: 24%;
+    top: 52%;
 }
 
 .puzzle-hotspot {
-    right: 43%;
-    bottom: 26%;
+    right: 47%;
+    bottom: 27%;
 }
 
 .charger-hotspot {
-    left: 27%;
-    top: 46%;
+    left: 14%;
+    top: 60%;
 }
 
 .sink-hotspot {
-    right: 31%;
-    top: 39%;
+    right: 28%;
+    top: 42%;
 }
 
 .meds-hotspot {
-    left: 14%;
-    bottom: 41%;
+    left: 28%;
+    bottom: 52%;
 }
 
 .tv-hotspot {
     right: 39%;
-    bottom: 22%;
+    bottom: 31%;
 }
 
 .shower-hotspot {
-    right: 47%;
-    top: 30%;
+    right: 64%;
+    top: 35%;
 }
+
+/*------------------------------------------------------------------------------------------*/
+/* surgery costs table */
+
+.costs-table {
+    width: 80%;
+    margin-bottom: 30px;
+    margin: 0 auto;
+    border-spacing: 0;
+    text-align: center;
+    background-color: var(--light-grey);
+    border-radius: 15px;
+}
+
+.costs-table tr.top-row th {
+    border-bottom: solid 1.5px rgb(62, 62, 62);
+    border-left: none;
+    border-top: none;
+    text-align: center;
+}
+
+.costs-table tr.top-row h2 {
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    padding: 0 15px 0 15px;
+}
+
+@media (max-width: 900px) {
+    .costs-table {
+        width: 100%;
+    }
+
+    .costs-table tr.top-row h2 {
+        padding: 5px 15px;
+        font-size: 18px;
+    }
+}
+
+.costs-table .column-1 {
+    box-sizing: border-box;
+    border-spacing: 0;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+}
+
+.costs-table .top-row .column-1 {
+    border-right: none;
+    border-left: none;
+}
+
+.costs-table .column-2 {
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+}
+
+.costs-table .row-1 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.costs-table td {
+    padding: 15px 15px 15px 10px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.costs-table .row-4 {
+    padding-bottom: 25px;
+    border-bottom: none;
+    padding-top: 15px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* scrotoplasty options table */
+
+.scroto-table {
+    width: 80%;
+    margin: 0px auto 60px auto;
+    border-spacing: 0;
+    text-align: center;
+    background-color: var(--light-grey);
+    border-radius: 15px;
+}
+
+.scroto-table tr.top-row th {
+    border-bottom: solid 2.5px rgb(62, 62, 62);
+    border-left: none;
+    border-top: none;
+    text-align: center;
+}
+
+.scroto-table tr.top-row h2 {
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    padding: 0 15px 0 15px;
+}
+
+@media (max-width: 900px) {
+    .scroto-table {
+        width: 100%;
+        font-size: 14px;
+        margin: 0px 0px 60px 0px;
+        padding: 5px;
+    }
+
+    .scroto-table tr.top-row h2 {
+        padding: 0px 15px;
+        font-size: 16px;
+    }
+
+}
+
+.scroto-table .column-1 {
+    box-sizing: border-box;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding: 15px 15px 15px 20px;
+}
+
+.scroto-table .column-2 {
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    border-top: none;
+    border-bottom: solid 1px rgb(207, 207, 207);
+    text-align: center;
+}
+
+.scroto-table .top-row .column-2 {
+    border-right: none;
+    border-left: none;
+    padding: 15px 20px 15px 20px;
+}
+
+.scroto-table .column-3 {
+    padding: 15px 20px 15px 15px;
+    text-align: center;
+    border-left: none;
+}
+
+.scroto-table .row-1 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.scroto-table td {
+    padding: 15px 15px 15px 10px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.scroto-table .row-6 {
+    padding-bottom: 25px;
+    border-bottom: none;
+    padding-top: 15px;
+}
+
+
+/*------------------------------------------------------------------------------------------*/
 
 .drag-queen-image {
     width: 20vw;
