@@ -335,9 +335,10 @@ ul.dysphoria-aid-list {
 }
 
 img.working-out-image.affective-image {
-    width: 25vw;
+    width: 15vw;
     float: right;
     transform: translateY(-60px);
+    margin-left: 40px;
 }
 
 /* img.working-out-image.affective-image.working-out-mobile {
@@ -696,15 +697,20 @@ div.paragraph-section.recovery-room {
 /*------------------------------------------------------------------------------------------*/
 /* surgery costs table */
 
+.costs-category-row {
+    background-color: none;
+}
+
 .costs-table {
     width: 80%;
     margin-bottom: 30px;
     margin: 0 auto;
     border-spacing: 0;
     text-align: center;
-    background-color: var(--light-grey);
     border-radius: 15px;
+    background-color: var(--light-grey);
 }
+
 
 .costs-table tr.top-row th {
     border-bottom: solid 1.5px rgb(62, 62, 62);
@@ -718,6 +724,7 @@ div.paragraph-section.recovery-room {
     font-size: 22px;
     padding-bottom: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0 15px 0 15px;
 }
 
@@ -771,6 +778,10 @@ div.paragraph-section.recovery-room {
 /*------------------------------------------------------------------------------------------*/
 /* scrotoplasty options table */
 
+.costs-category-row {
+    background-color: none;
+}
+
 .scroto-table {
     width: 80%;
     margin: 0px auto 60px auto;
@@ -792,8 +803,10 @@ div.paragraph-section.recovery-room {
     font-size: 22px;
     padding-bottom: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0 15px 0 15px;
 }
+
 
 @media (max-width: 900px) {
     .scroto-table {
