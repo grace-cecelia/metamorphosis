@@ -211,7 +211,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // showing active state of checkboxes
 //--------------------------------------------------------------------------------------------------
 
-
 // event listeners for checkboxes v2 
 function setupCheckboxListeners() {
     const checkboxes = document.querySelectorAll('.procedure-checkbox-input');

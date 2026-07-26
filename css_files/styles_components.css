@@ -1479,7 +1479,7 @@ div.content-image.options-pair img {
 @media (min-width: 1500px) {
     .home-page {
         display: flex;
-        gap: 50px;
+        gap: 125px;
         height: fit-content;
         margin-top: 40px;
         z-index: 1;
