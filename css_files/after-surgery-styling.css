@@ -113,18 +113,18 @@ ul:nth-child(1) {
 .recovery-timeline li:before {
     counter-increment: test;
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     border: 3px solid #4d407c;
     border-radius: 50%;
     display: block;
     text-align: center;
     line-height: 20px;
-    margin: 0 auto 0px auto;
+    margin: 3px auto 0px auto;
     background: #4d407c;
     color: #000;
     transition: all ease-in-out .3s;
-    cursor: pointer;
+    cursor: normal;
 }
 
 .dark-mode .recovery-timeline li:before {
@@ -140,11 +140,11 @@ ul:nth-child(1) {
 .recovery-timeline li:after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 3px;
+    width: 105%;
+    height: 5px;
     background-color: #4d407c;
     top: 10px;
-    left: -50%;
+    left: -55%;
     z-index: -999;
     transition: all ease-in-out .3s;
 }
