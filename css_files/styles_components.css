@@ -14,7 +14,7 @@
     --body-line-height: 1.2;
     --figure-cap-text: 16px;
     --sticky-header-offset: 88px;
-    --desktop-menu-width: 200px;
+    --desktop-menu-width: 220px;
     --mobile-menu-row-height: 56px;
 }
 
@@ -327,7 +327,13 @@ nav {
 
 .logo img {
     width: 20vw;
+    max-width: 250px;
     height: auto;
+}
+
+div.footer-section .logo {
+    align-self: center;
+    align-items: center;
 }
 
 .header-buttons {
@@ -761,6 +767,12 @@ a:active {
     text-decoration: none;
 }
 
+.dark-mode .summary-box-test a:link {
+    color: #bcf7b5;
+}
+
+
+
 /* .quick-escape-button {
     background-color: white;
     cursor: pointer;
@@ -790,7 +802,7 @@ a:active {
 /* Footer Styling */
 footer {
     background-color: var(--light-grey);
-    padding: 2rem 3rem 1rem 3rem;
+    padding: 2rem 3rem 1rem 5rem;
     margin-bottom: 0;
     bottom: 0px;
     position: sticky;
@@ -958,6 +970,10 @@ hr {
     line-height: 1;
 }
 
+h2.questions-footer {
+    text-align: left;
+}
+
 /* Responsive footer */
 @media (max-width: 900px) {
     .footer-content {
@@ -982,8 +998,9 @@ hr {
 
     p.questions-footer {
         margin-top: 20px;
-        text-align: center;
+        text-align: left;
     }
+
 
     #footer-right li {
         text-align: center;
@@ -992,10 +1009,6 @@ hr {
 
     #footer-right ul {
         padding-left: 0;
-    }
-
-    .logo img {
-        width: 80%;
     }
 
     footer {
@@ -1330,8 +1343,8 @@ div.content-image.options-pair img {
 /* Responsive content (paragraphs/images) styling */
 @media (max-width: 1200px) {
     .paragraph-section {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 
     .content-section {
@@ -1392,6 +1405,17 @@ div.content-image.options-pair img {
     align-items: center;
 }
 
+.homepage-desktop {
+    margin: 0 auto;
+    margin-left: 3vw;
+}
+
+@media (max-width: 900px) {
+    .homepage-desktop {
+        margin-left: 0;
+    }
+}
+
 /* ----------------------------------------------------------------------------------------------- */
 
 /* styling the grid of 4 icons on the home page */
@@ -1438,7 +1462,7 @@ div.content-image.options-pair img {
     text-align: center;
     filter: drop-shadow(0px 6px 4px grey);
     z-index: 1;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     height: 260px;
     width: 400px;
 }
@@ -1487,17 +1511,17 @@ div.content-image.options-pair img {
 @media (max-width: 1100px) {
     .home-page {
         flex-direction: column;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
         height: 680px;
-        margin-bottom: 300px;
+        margin-bottom: 250px;
     }
 
     .lab-gallery img {
-        width: 150px;
-        height: 150px;
+        width: 110px;
+        height: 100px;
         padding: 15px;
-        margin-top: 15px;
+        margin-top: 0px;
     }
 
     h1 {
@@ -1505,11 +1529,15 @@ div.content-image.options-pair img {
     }
 
     .home-gallery-button {
-        height: 250px;
+        height: 210px;
     }
 
     .home-gallery-button p {
         font-size: 16px;
+    }
+
+    .home-gallery-button h2 {
+        padding: 0px 15px;
     }
 
     .lab-gallery {
@@ -1523,6 +1551,15 @@ div.content-image.options-pair img {
 
     .boys-button {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        padding-bottom: 55px;
+    }
+
+    .boys-sketch-icon {
+        width: 80%;
+        text-align: center;
     }
 }
 
@@ -2106,10 +2143,113 @@ h2.section-name {
     }
 }
 
+.homepage-video {
+    width: 560px;
+    height: 315px;
+}
+
+@media (max-width: 900px) {
+
+    .homepage-video {
+        width: 280px;
+        height: 157.5px;
+    }
+}
+
+.homepage-video-section {
+    text-align: center;
+    margin-top: 55px;
+}
+
+@media (max-width: 900px) {
+    .homepage-video-section {
+        margin-top: 0px;
+    }
+}
+
 li {
     line-height: 1.5;
 }
 
+.dark-mode li {
+    color: var(--light-green);
+}
+
+ul.menu-item li {
+    line-height: 1.2;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.quote-container {
+    padding: 5px 30px 10px 30px;
+    background-color: #e5ddeb;
+    border-radius: 15px;
+    filter: drop-shadow(1px 1px 2px grey)
+}
+
+.testimonial-icon img {
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    float: right;
+    padding: 0px;
+    margin: 50px 15px 15px 15px;
+    background-color: white;
+    border-radius: 1000px;
+    border: solid 1px black;
+}
+
+@media (max-width: 768px) {
+
+    .quote-container {
+        position: relative;
+    }
+
+    .testimonial-icon {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .testimonial-icon img {
+        float: none;
+        position: relative;
+        padding: 0px;
+        margin: 50px auto 15px auto;
+        text-align: center;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.global-blur-button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--dark-green);
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 100px;
+    height: 50px;
+    width: 140px;
+    position: fixed;
+    right: 3vw;
+    top: var(--sticky-header-offset);
+    margin-top: 20px;
+    z-index: 1000;
+    filter: drop-shadow(1px 1px 1px grey);
+}
+
+.dark-mode .global-blur-button {
+    filter: drop-shadow(1px 1px 1px rgb(44, 44, 44));
+}
+
+@media (max-width: 900px) {
+    .global-blur-button {
+        right: 90px;
+    }
+}
 
 
 /* NOTE change the active and visited link text colors */

@@ -367,3 +367,48 @@ function topFunction() {
   document.documentElement.scrollTop = 0; 
 }
 
+
+//--------------------------------------------------------------------------------------------------
+
+//global blur 
+
+//--------------------------------------------------------------------------------------------------
+
+
+var globalBlurButton = document.getElementById('global-blur-button');
+var imagesToBlur = document.querySelectorAll('.image-to-blur');
+
+if (globalBlurButton && imagesToBlur.length > 0) {
+    globalBlurButton.addEventListener('click', function () {
+        console.log("Blur button clicked");
+        imagesToBlur.forEach(img => {
+            img.classList.toggle('blurred-image');
+        });
+
+        const isBlurred = imagesToBlur[0].classList.contains('blurred-image');
+        globalBlurButton.textContent = isBlurred ? 'Unblur Images' : 'Blur Images';
+
+        //blur labels if images are blurred
+        if (isBlurred) {
+            const labelContainers = document.querySelectorAll('.boys-label-container > div');
+            labelContainers.forEach(container => {
+                container.style.filter = 'blur(10px)';
+                container.style.opacity = '0.7';
+            });
+        } else {
+            const labelContainers = document.querySelectorAll('.boys-label-container > div');
+            labelContainers.forEach(container => {
+                container.style.filter = 'none';
+                container.style.opacity = '1';
+            });
+        }
+
+        const labelsToggle = document.getElementById('labels-toggle'); 
+        if (labelsToggle && labelsToggle.checked) {
+            updateLabels();
+        }
+    });
+
+} else {
+    console.log("Blur button or images not found - blur functionality disabled");
+}
