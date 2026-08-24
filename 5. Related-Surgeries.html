@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_files/styles_components.css">
     <link rel="stylesheet" href="css_files/before-surgery-styling.css">
+    <link rel="stylesheet" href="css_files/boys-styling.css">
     <link rel="stylesheet" href="css_files/after-surgery-styling.css">
     <link rel="icon" href="images/favicon.png">
     <script defer src="JS_files/include.js"></script>
@@ -60,6 +61,10 @@
                 </div>
             </div>
 
+            <button class="global-blur-button" id="related-blur-button">
+                <div style="font-family: var(--body-text);">Unblur images</div>
+            </button>
+
             <div class="paragraph-section hysto-intro" style="margin-top: 10px; width: 70%">
                 <div class="content-section">
                     <div class="content-item" style="width: 70%">
@@ -88,12 +93,12 @@
             <div class="paragraph-section before-after">
                 <div class="captioned-image related-surgeries" style="margin-top: 0px;">
                     <p>Before hysterectomy:</p>
-                    <img src="images/related-surgeries/pre_hysto_labels002.png" alt="pelvis before hysterectomy" />
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/pre_hysto_labels002.png" alt="pelvis before hysterectomy" />
                 </div>
 
                 <div class="captioned-image related-surgeries" style="margin-top: 0px;">
                     <p>After hysterectomy:</p>
-                    <img src="images/related-surgeries/post_hysto_labels002.png"
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/post_hysto_labels002.png"
                         alt="pelvis after hysterectomy with dotted outline of uterus" />
                 </div>
             </div>
@@ -196,13 +201,13 @@
             <div class="paragraph-section before-after">
                 <div class="captioned-image related-surgeries">
                     <p>Before monplasty:</p>
-                    <img src="images/related-surgeries/pre_mons003.jpg"
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/pre_mons003.jpg"
                         alt="lower abdomen and pelvis with fat overhanging the penis" />
                 </div>
 
                 <div class="captioned-image related-surgeries">
                     <p>After monsplasty:</p>
-                    <img src="images/related-surgeries/post_mons003.jpg"
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/post_mons003.jpg"
                         alt="lower abdomen and pelvis with a reduced amount of fat and more visible penis" />
                 </div>
             </div>
@@ -239,15 +244,15 @@
             <div class="paragraph-section before-after">
                 <div class="captioned-image related-surgeries">
                     <p>Without implants:</p>
-                    <img src="images/related-surgeries/no_implants001.jpg" alt="scrotum without implants" />
-                    <img src="images/related-surgeries/no_implants_sag001.jpg"
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/no_implants001.jpg" alt="scrotum without implants" />
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/no_implants_sag001.jpg"
                         alt="pelvis including scrotum without implants" />
                 </div>
 
                 <div class="captioned-image related-surgeries">
                     <p>With implants:</p>
-                    <img src="images/related-surgeries/implants_not_visible.jpg" alt="scrotum with implants" />
-                    <img src="images/related-surgeries/implants_sag001.jpg"
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/implants_not_visible.jpg" alt="scrotum with implants" />
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/implants_sag001.jpg"
                         alt="pelvis including scrotum with implants" />
                 </div>
             </div>
@@ -294,13 +299,13 @@
 
             <div class="paragraph-section before-after">
                 <div class="captioned-image related-surgeries">
-                    <img src="images/related-surgeries/implants_not_visible.jpg"
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/implants_not_visible.jpg"
                         alt="post-op rotational scrotoplasty" />
                     <p>Rotational scrotoplasty</p>
                 </div>
 
                 <div class="captioned-image related-surgeries">
-                    <img src="images/related-surgeries/bifid001.jpg" alt="post-op bifid scrotoplasty" />
+                    <img class="image-to-blur blurred-image" src="images/related-surgeries/bifid001.jpg" alt="post-op bifid scrotoplasty" />
                     <p>Bifid scrotoplasty</p>
                 </div>
             </div>
@@ -425,10 +430,10 @@
 
             <div class="next-last-page">
                 <div class="page-button-container">
-                    <a href="B.%20Complications.html"><button class="last-page-btn"><b>←</b> Previous</button></a>
+                    <a href="B.%20Complications.html"><button class="last-page-btn">←  Previous</button></a>
                 </div>
                 <div class="next-page-button-container">
-                    <a href="6.%20Glossary.html"><button class="next-page-btn">Next <b>→</b></button></a>
+                    <a href="6.%20Glossary.html"><button class="next-page-btn">Next  →</button></a>
                 </div>
             </div>
 

@@ -607,7 +607,6 @@ div.paragraph-section.recovery-room {
 .label-all {
     position: absolute;
     transform: translateY(-50%) translateX(5%);
-    /* SS Comment: Replace oversized fixed percentage with responsive label sizing. */
     width: max-content;
     max-width: min(320px, 70vw);
     white-space: normal;
@@ -624,6 +623,7 @@ div.paragraph-section.recovery-room {
     top: 50%;
     z-index: 1000;
 }
+
 
 @media (max-width: 900px) {
     .label-all {
@@ -675,8 +675,8 @@ div.paragraph-section.recovery-room {
 }
 
 .sink-hotspot {
-    right: 28%;
-    top: 42%;
+    right: 26%;
+    top: 43%;
 }
 
 .meds-hotspot {
@@ -690,8 +690,48 @@ div.paragraph-section.recovery-room {
 }
 
 .shower-hotspot {
-    right: 64%;
+    right: 61%;
     top: 35%;
+}
+
+.freezer-hotspot {
+    right: 12%;
+    top: 50%;
+}
+
+.cart-hotspot {
+    right: 43%;
+    bottom: 41%;
+}
+
+.laundry-hotspot {
+    left: 36%;
+    top: 49%;
+}
+
+.fish-hotspot {
+    left: 19%;
+    top: 53%;
+}
+
+.books-hotspot {
+    left: 10%;
+    bottom: 43%;
+}
+
+.trash-hotspot {
+    right: 33%;
+    top: 41%;
+}
+
+.tp-hotspot {
+    top: 31%;
+    left: 51%;
+}
+
+.cabinet-hotspot {
+    top: 36%;
+    right: 22.5%;
 }
 
 /*------------------------------------------------------------------------------------------*/

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_files/styles_components.css">
     <link rel="stylesheet" href="css_files/before-surgery-styling.css">
+    <link rel="stylesheet" href="css_files/boys-styling.css">
     <link rel="stylesheet" href="css_files/after-surgery-styling.css">
     <link rel="icon" href="images/favicon.png">
     <script defer src="JS_files/include.js"></script>
@@ -68,6 +69,10 @@
                 </div>
             </div>
 
+            <button class="global-blur-button" id="overview-blur-button">
+                <div style="font-family: var(--body-text);">Unblur images</div>
+            </button>
+
 
             <!-- adding in definitions on hover: https://stackoverflow.com/questions/54471202/how-to-display-a-definition-on-hover-over-a-word-that-is-in-a-sentence-->
 
@@ -79,9 +84,13 @@
                     <div class="content-item">
 
                         <div class="content-item">
-                            <img class="complications-image intro-image"
-                                src="images/boys-tool-illustrations/front/medium_smaller_1234.jpg" alt="full meta">
+                            <div class="captioned-image">
+                                <img class="complications-image intro-image image-to-blur blurred-image"
+                                    src="images/boys-tool-illustrations/front/medium_smaller_1234.jpg" alt="full meta">
+                                <!--<p>Healed results of a full metoidioplasty</p>-->
+                            </div>
                         </div>
+
 
                         <p>Metoidioplasty is a gender-affirming surgery that creates a penis from your existing
                             genital tissue (clitoris and labia). The word “metoidioplasty” comes from a
@@ -92,16 +101,19 @@
                         <p class="list-end">Plastos: shaping or molding.
 
                         <p>The primary goal is to create a penis (5-9 cm long on average) with full sensation
-                            using
-                            the
-                            existing genital tissue. Metoidioplasty is also called “meta” for short.<br></br>
+                            using the existing genital tissue. Metoidioplasty is also called “meta” for short.
 
-                            Meta is different from phalloplasty, another genital surgery that creates a penis.
+                        <p>Meta is different from phalloplasty, another genital surgery that creates a penis.
                             Instead of using the clitoris and labia, phalloplasty uses a graft transferred from
                             another part of your body. Phalloplasty usually results in a larger penis than
-                            meta.<br></br>
+                            meta (12-15 cm long on average).
 
-                            Keep scrolling to learn more about metoidioplasty.
+                        <p>Keep scrolling to learn more about metoidioplasty.
+
+                        <p>Note: Anatomical terms like “clitoris”, “labia”, and “vagina” are used throughout the site
+                            for clarity and consistency. We recognize that not everyone uses these terms for their
+                            genitals.
+
                         </p>
 
                     </div>
@@ -128,7 +140,8 @@
                         <p>Here is a look at the anatomy of the pelvis before having meta. Understanding your pre-op
                             anatomy will help
                             you understand what changes during meta.
-                        <p>Notice that the uterus is not shown here because most people get a hysterectomy before meta.
+                        <p>Notice that the uterus is not shown here, because most people have it removed before meta.
+                            The surgery to remove your uterus is called a “hysterectomy”.
                             Read
                             more about hysterectomies on the <a href="5. Related-Surgeries.html">Related Surgeries
                                 page.</a>
@@ -138,11 +151,11 @@
             </div>
 
             <div class="paragraph-section before-after">
-                <div class="captioned-image related-surgeries">
-                    <img src="images/overview/pre_op_ant_labels.png" alt="front view of genitals before meta" />
+                <div class="captioned-image related-surgeries image-to-blur blurred-image">
+                    <img src="images/overview/pre-op_anterior_labelled.jpg" alt="front view of genitals before meta" />
                 </div>
 
-                <div class="captioned-image related-surgeries">
+                <div class="captioned-image related-surgeries image-to-blur blurred-image">
                     <img src="images/overview/pre_op_sag_labels.png" style="background-color: var(--light-green);"
                         alt="side view of pelvis before meta" />
                 </div>
@@ -160,7 +173,7 @@
 
                 <div class="content-section meta-options">
                     <div class="option-item">
-                        <h2 style="font-size: 20px; margin-top: 15px;">Simple meta</h2>
+                        <h2 style="font-size: 20px; margin-top: 15px;">Simple Meta</h2>
                         <p>The ligaments that hold the clitoris close to the body are cut
                             to give it more mobility and make it
                             more visible.
@@ -168,72 +181,93 @@
                             make a penis.</p>
                     </div>
                     <div class="option-item">
-                        <div class="content-image options-pair">
-                            <img src="images/overview/pre-simple.png" alt="pre-op of simple meta" />
-                            <img src="images/overview/post simple.png" alt="post-op of simple meta" />
+                        <div class="content-image options-pair image-to-blur blurred-image">
+                            <img src="images/overview/pre-simple.webp" alt="pre-op of simple meta" />
+                            <img src="images/overview/post simple.webp" alt="post-op of simple meta" />
                         </div>
                     </div>
                 </div>
 
                 <div class="content-section meta-options">
+                    <p><b>Note:</b> language can get confusing when describing meta.
+                        All forms of meta involve the clitoris being released and the labia minora being sewn together.
+                        If you stop at this stage, the surgery is called “simple meta.” If you add more procedures, like
+                        the ones discussed below, it’s called “meta with (procedure name)”.
+                    </p>
+                </div>
+
+                <div class="content-section meta-options">
                     <div class="option-item">
-                        <h2 style="font-size: 20px; margin-top: 15px;">Vaginectomy (Vnectomy)</h2>
-                        <p>The vaginal lining is removed but the muscles
-                            around the outside of the canal stay there.
+                        <h2 style="font-size: 20px; margin-top: 15px;">Meta with Vaginectomy (Vnectomy)</h2>
+                        <p>The vaginal lining is removed, but the muscular walls
+                            around the outside of the canal stay in place.
                         <p>The vaginal canal and the vaginal opening (front hole) are fully closed. You must have a
                             hysterectomy at least 3 months before having a vaginectomy.</p>
                     </div>
                     <div class="option-item">
-                        <div class="content-image options-pair">
-                            <img src="images/overview/pre vnectomy.png" alt="pre-op of meta with vaginectomy" />
-                            <img src="images/overview/post vnectomy.png" alt="post-op of meta with vaginectomy" />
+                        <div class="content-image options-pair image-to-blur blurred-image">
+                            <img src="images/overview/3. pre vnectomy.webp" alt="pre-op of meta with vaginectomy" />
+                            <img src="images/overview/4. post vnectomy.webp" alt="post-op of meta with vaginectomy" />
                         </div>
                     </div>
                 </div>
 
                 <div class="content-section meta-options">
                     <div class="option-item">
-                        <h2 style="font-size: 20px; margin-top: 15px;">Urethral Lengthening (UL)</h2>
-                        <p>The urethral opening (pee hole) is moved to the tip
-                            of the new penis. Depending on your anatomy,
-                            this may allow you to pee in a standing position.
+                        <h2 style="font-size: 20px; margin-top: 15px;">Meta with Urethral Lengthening (UL)</h2>
+                        <p>The urethra is the tube that empties your bladder. In urethral lengthening, the labia minora
+                            are sewn together to form a tube. This tube extends the urethral opening (pee hole) to the
+                            tip of the penis. Depending on your anatomy, UL may allow you to pee while standing.
                         <p>If you choose this option you will
                             need to have a
                             vaginectomy, which can be done at the same time as the metoidioplasty.</p>
                     </div>
                     <div class="option-item">
-                        <div class="content-image options-pair">
-                            <img src="images/overview/pre UL.png" alt="pre-op of meta with urethral lengthening" />
-                            <img src="images/overview/post UL.png" alt="post-op of meta with urethral lengthening" />
+                        <div class="content-image options-pair image-to-blur blurred-image">
+                            <img src="images/overview/5. pre UL.webp" alt="pre-op of meta with urethral lengthening" />
+                            <img src="images/overview/6. post UL.webp"
+                                alt="post-op of meta with urethral lengthening" />
                         </div>
                     </div>
                 </div>
 
                 <div class="content-section meta-options">
                     <div class="option-item">
-                        <h2 style="font-size: 20px; margin-top: 15px;">Scrotoplasty</h2>
-                        <p>The scrotum is the two bags of skin that hold the testicles.
+                        <h2 style="font-size: 20px; margin-top: 15px;">Meta with Scrotoplasty</h2>
+                        <p>The scrotum is the bag of skin behind the penis that holds the testicles.
                             The labia majora are used to create the scrotum.
-                        <p>You can choose to have a scrotum with or without testicular implants.
+                        <p>You can choose to have a scrotum with or without testicular implants. If you choose
+                            testicular implants, they will be placed 6 months or more after you get meta.
                         </p>
                     </div>
                     <div class="option-item">
-                        <div class="content-image options-pair">
-                            <img src="images/overview/pre scroto.png" alt="pre-op for meta with scrotoplasty" />
-                            <img src="images/overview/post scroto.png" alt="post-op for meta with scrotoplasty" />
+                        <div class="content-image options-pair image-to-blur blurred-image">
+                            <img src="images/overview/7. pre scroto.webp" alt="pre-op for meta with scrotoplasty" />
+                            <img src="images/overview/8. post scroto.webp" alt="post-op for meta with scrotoplasty" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section meta-options">
+                    <div class="option-item">
+                        <h2 style="font-size: 20px; margin-top: 15px;">Full Metoidioplasty</h2>
+                        <p>“Full meta” is a combination of all of these options. If you choose full meta, all of these
+                            procedures will be done during the same surgery.
+                    </div>
+                    <div class="option-item">
+                        <div class="content-image options-pair image-to-blur blurred-image">
+                            <img src="images/overview/9. pre full meta.webp" alt="pre-op of meta with vaginectomy" />
+                            <img src="images/overview/10. post full meta.webp" alt="post-op of meta with vaginectomy" />
                         </div>
                     </div>
                 </div>
 
                 <div class="content-section">
                     <div class="content-item">
-                        <p>“Full meta” is a combination of all of these options. Try mixing and matching these
-                            options on the <a href="A. BOYS.html">Build-Your-Own-Surgery
+                        <p>Try mixing and matching these options on the <a href="A. BOYS.html">Build Out Your Surgery
                                 page.</a>
-
-                        <p>There are also other procedures to consider, including monsplasty and testicular
-                            implants. Read more about these procedures on the <a
-                                href="5. Related-Surgeries.html">Related
+                        <p>There are also other procedures to consider, including monsplasty and testicular implants.
+                            Read more about these procedures on the <a href="5. Related-Surgeries.html">Related
                                 Surgeries</a> page.</p>
                     </div>
                 </div>
@@ -261,39 +295,34 @@
 
                             <button class="goals-button">How do I want my genitals to look?</button>
                             <div class="goals-text">
-                                <p>Am I interested in changing the external appearance of my genitals?</p>
-                                <p>Am I interested in having more prominent erections?</p>
-                                <p>Would I like to have the appearance of a scrotum?</p>
-                                <p>Would I like to have testicular implants?</p>
+                                <p>Do I want to change how my genitals look?
+                                <p>Do I want to have more visible erections?
+                                <p>Do I want to have a scrotum?
+                                <p>Do I want to have a scrotum with testicular implants?</p>
                             </div>
 
                             <button class="goals-button">How do I want my genitals to work?</button>
                             <div class="goals-text">
-                                <p>Would I like to have receptive sex (something put inside you)?</p>
-                                <p>Would I like to have insertive sex (put your body inside someone else)?</p>
+                                <p>Would I like to have receptive sex (something put inside you)?
+                                <p>Would I like to have insertive sex (put your genitals inside someone else)?
                                 <p>Would I like to stand to pee (STP)?</p>
                             </div>
 
                             <button class="goals-button">How do I feel about risk and recovery from surgery?</button>
                             <div class="goals-text">
-                                <p>Can I take additional time off work or study for follow-up appointments/revision
-                                    surgeries/additional recovery time?</p>
-                                <p>If I get urethral lengthening, can I accept the increased risk of complications?</p>
+                                <p>Can I take at least 4 weeks off work or school to recover from surgery?
+                                <p>Can I take additional time off work or school in case of revisions or complications?
+                                <p>If I get urethral lengthening, can I accept the increased risk of complications?
+                                </p>
                             </div>
 
                             <button class="goals-button">How is my current health?</button>
                             <div class="goals-text">
-                                <p>Is my mental health in a stable place?</p>
-                                <p>Are there any mental health supports I may need to help support me through surgery?
-                                </p>
-                                <p>Are there any new physical or mental health symptoms I’m experiencing that I haven’t
-                                    seen
-                                    a
-                                    doctor for yet?</p>
-                                <p>Do I have any chronic conditions that will make this surgery challenging, and if yes,
-                                    how
-                                    can
-                                    I prepare for that?</p>
+                                <p>Is my mental health in a stable enough place to prepare for and recover from surgery?
+                                <p>Are there any mental health supports I need to help me through surgery?
+                                <p>Am I experiencing any new physical or mental health symptoms that I haven’t seen a
+                                    doctor for yet?
+                                <p>How can I manage any chronic conditions that may make this surgery challenging?</p>
                             </div>
                         </div>
                     </div>
@@ -319,7 +348,8 @@
                                 <p>You may not be satisfied with the size of your penis</p>
                             </li>
                             <li>
-                                <p>The size of the penis is usually not large enough for penetrative sex</p>
+                                <p>The size of the penis is usually not large enough to put into a partner’s vagina or
+                                    anus</p>
                             </li>
                             <li>
                                 <p>You may not be able to stand to pee (STP), even if you get urethral lengthening
@@ -332,21 +362,16 @@
                                 <p>Your penis may not feel the same way during sex as it used to</p>
                             </li>
                         </ul>
-                        <p><b>Your pre-surgical anatomy is the strongest predictor of your post-surgical
-                                anatomy.</b>
-                            This
-                            means
-                            that your bottom growth before surgery will determine how large your penis is after
-                            surgery.
+                        <p><b>The results of your surgery depend on your anatomy before surgery.</b>This means that the
+                            size of your clitoris before surgery will determine the size of your penis after surgery.
                             Read more details about <a href="C. How-consults-work.html">Pre-Surgical
-                                Anatomy.</a><br></br>
+                                Anatomy.</a>
 
-                            If penis size is one of your concerns, you may want to consider phalloplasty, which
-                            creates
-                            a
-                            larger penis than meta. The size of your penis after phalloplasty does not rely on the
-                            amount of
-                            bottom growth you've had with testosterone therapy. You can find more information about
+                        <p>If penis size is one of your concerns, you may want to consider phalloplasty. Phalloplasty is
+                            another surgery which creates a larger penis than meta (12-15 cm on average). The size of
+                            your penis after phalloplasty does not rely on how much bottom growth you’ve had. Bottom
+                            growth is when your clitoris grows because of the effects of testosterone therapy. You can
+                            find more information about
                             phalloplasty in <a
                                 href="https://www.genderconfirmation.com/bottom-surgery-ftm-metoidioplasty/"
                                 target="_blank">this
@@ -400,10 +425,11 @@
                                 <p>Mental health decline</p>
                             </li>
                             <li>
-                                <p>Dissatisfaction with appearance</p>
+                                <p>Regret or unhappiness with the results</p>
                             </li>
                             <li>
-                                <p>Reaction to anesthesia</p>
+                                <p>Reaction to anesthesia (the medications that make you go to sleep and stop you from
+                                    feeling pain during surgery)</p>
                             </li>
                         </ul>
                         </p>
@@ -412,7 +438,8 @@
                     <div class="content-item complications-overview">
                         <div class="general-image-container">
                             <div class="captioned-image">
-                                <img src="images/complications/dehiscence003.png" alt="wound separation">
+                                <img class="image-to-blur blurred-image" src="images/complications/dehiscence003.png"
+                                    alt="wound separation">
                                 <p style="margin-top: 15px;">Wound separation on the penis</p>
                             </div>
                         </div>
@@ -436,8 +463,7 @@
                                 <p>Urine stream dribbles, sprays, or is weak</p>
                             </li>
                             <li>
-                                <p>Difficulty or pain while emptying your bladder
-                                </p>
+                                <p>Difficulty or pain while peeing</p>
                             </li>
                             <li>
                                 <p>Urethral fistula: unwanted opening in the urethra that leaks urine
@@ -458,14 +484,17 @@
                                 </p>
                             </li>
                         </ul>
+                        <p>Some of these complications may need medication or another surgery to be fixed. Sometimes, a
+                            new hole is made under the scrotum for pee to come out (urethrostomy). In this case, you
+                            will no longer be able to stand to pee.
                         </p>
                     </div>
 
                     <div class="content-item complications-overview">
                         <div class="general-image-container">
                             <div class="captioned-image">
-                                <img src="images/complications/fistula.png" style="background-color: #CCDDCA;"
-                                    alt="urethral fistula">
+                                <img class="image-to-blur blurred-image" src="images/complications/fistula.png"
+                                    style="background-color: #CCDDCA;" alt="urethral fistula">
                                 <p style="margin-top: 15px;">Urethral fistula (unwanted opening)</p>
                             </div>
                         </div>
@@ -486,19 +515,18 @@
 
                         <ul>
                             <li>
-                                <p>Very rarely, the bowel or bladder is injured, which can cause other
-                                    complications.
-                                </p>
-                            </li>
-                            <li>
-                                <p>Some amount of vaginal tissue may be left behind and cause a pocket of fluid to
-                                    form.
-                                    This can cause pain or UTIs and may require a follow-up surgery to fix.
-
+                                <p>Very rarely, the bowel or bladder is injured during surgery. This complication may
+                                    cause infection or internal bleeding.
                                 </p>
                             </li>
                             <li>
                                 <p>Pain in the pelvis that does not go away.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Vaginal remnant: some of the vaginal lining is left behind and a pocket of fluid
+                                    forms where the vagina used to be. This issue can cause pain and urinary
+                                    complications. It may require a follow-up surgery to fix.
                                 </p>
                             </li>
                         </ul>
@@ -508,8 +536,8 @@
                     <div class="content-item complications-overview">
                         <div class="general-image-container">
                             <div class="captioned-image">
-                                <img src="images/complications/vaginal_remnant.png" style="background-color: #CCDDCA;"
-                                    alt="urethral fistula">
+                                <img class="image-to-blur blurred-image" src="images/complications/vaginal_remnant.png"
+                                    style="background-color: #CCDDCA;" alt="urethral fistula">
                                 <p style="margin-top: 15px;">Vaginal remnant (vaginal tissue left behind)</p>
                             </div>
                         </div>
@@ -519,52 +547,61 @@
             </div>
 
 
-            <!--<div class="paragraph-section">
-                <h2>Recovery</h2>
+            <div class="paragraph-section">
+                <h2 style="margin-bottom: 15px;">Recovery</h2>
                 <div class="content-section">
                     <div class="content-item">
-                        <p>Recovery time differs for everyone. Speed and ease of recovery depend on many factors,
-                            including your health before surgery and if you have complications after surgery. These
-                            estimates are averages. See a more detailed timeline on the <a
-                                href="./4. After Surgery/A. Recovery.html">Recovery page.</a>
+                        <p>Recovery time differs for everyone. It depends on which surgery you had, your health before
+                            surgery, and if you have complications after surgery. These are some of the most important
+                            milestones in recovery, but keep in mind that these estimates are averages.
                         </p>
                     </div>
                 </div>
 
                 <div class="content-section">
-                    <img src="/images/overview/overview_timeline.png"
-                        alt="recovery timeline comparison between simple and full meta" style="width:70vw" />
+                    <div class="timeline-desktop-light">
+                        <img src="images/overview/timeline_desktop_light.png"
+                            alt="key recovery milestones in simple vs. full meta" />
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <div class="timeline-desktop-dark">
+                        <img src="images/overview/timeline_desktop_dark.png"
+                            alt="key recovery milestones in simple vs. full meta" />
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <div class="timeline-mobile-light">
+                        <img src="images/overview/timeline_mobile_light.png"
+                            alt="key recovery milestones in simple vs. full meta" />
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <div class="timeline-mobile-dark">
+                        <img src="images/overview/timeline_mobile_dark.png"
+                            alt="key recovery milestones in simple vs. full meta" />
+                    </div>
+                </div>
+
+                <!--<div class="content-section">
+                <div class="recovery-timeline-container">
+                    <ul class="recovery-timeline">
+                        <li class="active-tl">Surgery</li>
+                        <li>48 hrs: home from hospital</li>
+                        <li>1-3 weeks: catheter removed</li>
+                        <li>8-12 weeks: back to work</li>
+                        <li>12 weeks: return to all activities</li>
+                    </ul>
                 </div>
             </div>-->
 
-            <div class="paragraph-section">
-                <h2 style="margin-bottom: 15px;">Recovery</h2>
-                <div class="content-section" style="margin-bottom: 0px;">
-                    <div class="content-item" style="margin-bottom: 0px;">
-                        <!--delete inline styles once timeline is restored for mobile-->
-                        <p>Recovery time differs for everyone. Speed and ease of recovery depend on many factors,
-                            including your health before surgery and if you have complications after surgery. These are
-                            some of the most important milestones in recovery, but keep in mind that these
-                            estimates are averages.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <div class="recovery-timeline-container">
-                        <ul class="recovery-timeline">
-                            <li class="active-tl">Surgery</li>
-                            <li>48 hrs: home from hospital</li>
-                            <li>1-3 weeks: catheter removed</li>
-                            <li>8-12 weeks: back to work</li>
-                            <li>12 weeks: return to all activities</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="content-section">
+                <div class="content-section" style="margin-top: 20px;">
                     <p>You can learn more about the recovery process after meta on the <a
-                            href="A. Recovery.html">Recovery page.</a></p>
+                            href="A. Recovery.html">Recovery
+                            page.</a></p>
                 </div>
             </div>
 
@@ -596,7 +633,7 @@
                             <h2>Full Meta</h2>
                         </th>
                         <th>
-                            <h2>Phalloplasty</h2>
+                            <h2>Phallo</h2>
                         </th>
                     </tr>
                     <tr class="category-row">
@@ -618,7 +655,7 @@
                         <td>+
                             (depends on labia minora)
                         </td>
-                        <td>++</td>
+                        <td style="font-size: 22px;">++</td>
                     </tr>
                     <tr>
                         <td class="table-title-column">Scrotum</td>
@@ -634,9 +671,9 @@
                     </tr>
                     <tr>
                         <td class="table-title-column">Visible bulge (outside clothing)</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>+</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td style="font-size: 22px;">+</td>
                     </tr>
                     <tr class="category-row">
                         <th class="table-title-column" colspan="4">
@@ -645,35 +682,35 @@
                     </tr>
                     <tr>
                         <td class="table-title-column">Stand to pee</td>
-                        <td>-</td>
-                        <td>+</td>
-                        <td>+</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td style="font-size: 22px;">+</td>
+                        <td style="font-size: 22px;">+</td>
                     </tr>
                     <tr>
                         <td class="table-title-column">Erections</td>
-                        <td>+</td>
-                        <td>+</td>
+                        <td style="font-size: 22px;">+</td>
+                        <td style="font-size: 22px;">+</td>
                         <td>Possible with implant
                         </td>
                     </tr>
                     <tr>
-                        <td class="table-title-column">Erogenous sensation</td>
-                        <td>+</td>
-                        <td>+</td>
-                        <td>May develop over months to years</td>
+                        <td class="table-title-column">Erogenous (natural) sensation</td>
+                        <td style="font-size: 22px;">+</td>
+                        <td style="font-size: 22px;">+</td>
+                        <td>Present in clitoris. Phallus may develop sensation over
+                            months to years.</td>
                     </tr>
                     <tr>
-                        <td class="table-title-column">Penetrative sex (giving)</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Possible with implant
-                        </td>
+                        <td class="table-title-column">Insertive sex (penetrating)</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td>Possible with implant</td>
                     </tr>
                     <tr>
-                        <td class="table-title-column">Penetrative sex (receiving)</td>
-                        <td>+</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td class="table-title-column">Receptive sex (being penetrated)</td>
+                        <td style="font-size: 22px;">+</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td style="font-size: 22px;">-</td>
                     </tr>
                     <tr class="category-row">
                         <th class="table-title-column" colspan="4">
@@ -689,9 +726,9 @@
                     </tr>
                     <tr>
                         <td class="table-title-column">Urinary complications</td>
-                        <td>-</td>
-                        <td>+</td>
-                        <td>+</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td style="font-size: 22px;">+</td>
+                        <td style="font-size: 22px;">++</td>
                     </tr>
                     <tr>
                         <td class="table-title-column">Numbness</td>
@@ -718,9 +755,9 @@
                     </tr>
                     <tr>
                         <td class="table-title-column">Catheter</td>
-                        <td>-</td>
-                        <td>+</td>
-                        <td>+</td>
+                        <td style="font-size: 22px;">-</td>
+                        <td style="font-size: 22px;">+</td>
+                        <td style="font-size: 22px;">+</td>
                     </tr>
                     <tr>
                         <td class="table-title-column column-1">Possible costs</td>
@@ -739,7 +776,8 @@
             <div class="paragraph-section">
                 <div class="content-item">
                     <p>For a more in-depth comparison of meta options, see the <a
-                            href="A. BOYS.html">Build-Out-Your-Surgery Page.</a></p>
+                            href="A. BOYS.html">Build-Out-Your-Surgery
+                            Page.</a></p>
                 </div>
             </div>
 
@@ -748,60 +786,75 @@
                 <div class="content-section">
                     <p>Metoidioplasty is covered by the Ontario Health Insurance Plan (OHIP) for residents of
                         Ontario. To get meta at the WCH Transition-Related Surgery (TRS) Program, you first need
-                        approved funding through OHIP, UHIP, or an alternative federal program. Learn about the
-                        specific guidelines on the <a href="https://www.ontario.ca/page/gender-confirming-surgery"
-                            target="_blank">Government of Ontario
-                            page.</a>
+                        approved funding through OHIP, UHIP, or an alternative federal program. You can learn how to
+                        start the process of getting surgery on the <a
+                            href="https://www.ontario.ca/page/gender-confirming-surgery" target="_blank">Government of
+                            Ontario page.</a>
                     </p>
                 </div>
 
-                <div class="content-section">
+                <div class="content-section" style="margin-bottom: 0px;">
                     <p>The process of getting approval for genital surgery is similar to top surgery, with a few
-                        extra steps. You will need to have two TRS planning visits with a care provider. One of the
-                        visits must be with a doctor or nurse practitioner (NP), and the other one can be with a
-                        doctor, NP, psychologist, or registered social worker. Specialists like endocrinologists or
-                        psychiatrists are also eligible.
-                    </p>
+                        extra steps:</p>
                 </div>
+
+                <div class="content-section" style="margin-top: 0px;">
+                    <ol style="margin-top: 0px;">
+                        <li>
+                            <p>Book two surgery planning visits with a care provider. You can have these visits with a
+                                variety of different providers, including:
+                            <ul>
+                                <li>The doctor who prescribes your hormones (ie. primary care provider or
+                                    endocrinologist)</li>
+                                <li>A psychiatrist</li>
+                                <li>Through a program offering gender care services</li>
+                                <li>A registered social worker</li>
+                                <li>A nurse practitioner</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>After these visits, your care provider will submit a request for OHIP funding.
+                        </li>
+                        <li>
+                            <p>If the request is approved, your provider will send a referral to the clinic or hospital
+                                where you want to get surgery.
+                        </li>
+                        <li>
+                            <p>If the referral is accepted, the surgical team will contact you to schedule a
+                                consultation.
+                        </li>
+                        </p>
+                </div>
+
 
                 <div class="content-section">
-                    <p>Once your TRS planning visits are complete, your provider will submit a medical form to
-                        request OHIP funding approval. After approval, a referral will be sent to your chosen
-                        surgical center. If the referral is accepted, the surgical team will contact you to schedule
-                        an initial consultation.
-                    </p>
-                </div>
-
-                <div class="content-ssection">
                     <img class="wch-image" src="images/affective-illustrations/wch_buildings.png"
                         alt="women's college hospital buildings" />
                 </div>
 
                 <div class="content-section">
-                    <p>Women’s College Hospital is an ambulatory center, which means it does not have all of
-                        the
-                        same specialists and resources that a larger hospital does. For example, there is no
-                        emergency room or intensive care unit. There are actually very few patients who stay
-                        overnight in the hospital, which limits who can have surgery at WCH. If there are concerns
-                        about your eligibility for surgery at WCH, the surgical team may request more information
-                        from your health care team. They will send this request before scheduling a consult, or
-                        between the nurse consult and surgeon consult.
+                    <p>Women’s College Hospital is an ambulatory center, which means it does not have the same resources
+                        that a larger hospital does. There are actually very few patients who stay overnight in the
+                        hospital. This may limit who can have surgery at WCH. If the TRS team is concerned that you
+                        might not be fit for surgery at WCH, they will contact your primary care provider (PCP) before
+                        your first or second consultation.
                     </p>
                 </div>
 
                 <div class="content-section">
-                    <p>As of July 2026, WCH is the only place in Ontario that offers metoidioplasty. Phalloplasty is
-                        not available at WCH at this time.
-                    </p>
+                    <p>The TRS team at WCH is there to support you through your metoidioplasty journey. The TRS team
+                        will include a doctor and nurse and possibly a physiotherapist or psychiatrist. The TRS team
+                        will help you in the many different ways:</p>
                 </div>
 
                 <div class="content-section">
-                    <p>The TRS team at WCH is there to support you through your metoidioplasty journey. Your health
-                        care team will include a doctor or nurse practitioner and possibly a social worker, nurse,
-                        or psychologist. They will support you in discussing your goals, surgical and non-surgical
-                        options, risks, benefits, and health considerations. They will also help find out if you
-                        meet the criteria for surgery and coordinate any specialist care you may need. It is their
-                        responsibility to ensure that you are informed and ready for surgery.
+                    <ul style="margin-top: 0px;">
+                        <li>Discuss your goals, surgical and non-surgical options, risks, benefits, and health
+                            considerations with you.</li>
+                        <li>Help find out if you meet the criteria for surgery.</li>
+                        <li>Let your PCP know if you need to see any specialist doctors.</li>
+                        <li>Ensure that you are informed about and ready for surgery.</li>
+                    </ul>
                     </p>
                 </div>
 
@@ -809,10 +862,10 @@
 
             <div class="next-last-page">
                 <div class="page-button-container">
-                    <a href="index.html"><button class="last-page-btn"><b>←</b> Previous</button></a>
+                    <a href="index.html"><button class="last-page-btn">← Previous</button></a>
                 </div>
                 <div class="next-page-button-container">
-                    <a href="1.%20FAQ-before.html"><button class="next-page-btn">Next <b>→</b></button></a>
+                    <a href="1.%20FAQ-before.html"><button class="next-page-btn">Next →</button></a>
                 </div>
             </div>
 
