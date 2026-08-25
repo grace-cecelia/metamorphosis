@@ -308,12 +308,13 @@ div.content-section.prosthetics {
 
 ul.dysphoria-aid-list {
     color: black;
-    margin: 0px;
+    margin-bottom: 0px;
 }
 
 .dysphoria-aid-list p {
     line-height: 1.5;
-    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -928,6 +929,7 @@ div.paragraph-section.consults-intro {
 
 }
 
+/*------------------------------------------------------------------------------------------*/
 
 .content-section .consults-disclaimer {
     background-color: var(--light-grey);
@@ -938,7 +940,7 @@ div.paragraph-section.consults-intro {
 }
 
 .content-section .consults-disclaimer p {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .consult-image {
@@ -998,9 +1000,9 @@ div.paragraph-section.before-after {
 
 @media (max-width: 1200px) {
     div.paragraph-section.before-after {
-    width: 80%;
-    flex-direction: column;
-}
+        width: 80%;
+        flex-direction: column;
+    }
 }
 
 div.paragraph-section.before-after-intro {
@@ -1011,6 +1013,8 @@ div.paragraph-section.before-after-intro {
 div.paragraph-section.hysto-intro {
     margin-bottom: 0px;
 }
+
+/*------------------------------------------------------------------------------------------*/
 
 /* pain management section and icon rows */
 div.paragraph-section.pain-management-intro {
@@ -1119,4 +1123,31 @@ div.paragraph-section.pain-management-intro {
         text-align: left;
         align-self: center;
     }
+}
+
+
+/*------------------------------------------------------------------------------------------*/
+
+
+.serious-complication-line {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.serious-complication-line img {
+    height: 40px;
+    width: auto;
+}
+
+div.paragraph-section.serious-complications {
+    background: var(--light-grey);
+    border-radius: 15px;
+    padding: 20px 40px 0px 40px;
+}
+
+.dark-mode div.paragraph-section.serious-complications {
+    background: var(--dark-green);
 }
