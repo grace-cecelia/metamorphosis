@@ -2224,7 +2224,7 @@ h2.section-name {
 
 @media (max-width: 900px) {
     .last-page-btn {
-        bottom: 5vh;
+        bottom: 3vh;
         left: 3vw;
         z-index: 99;
     }
@@ -2236,14 +2236,6 @@ h2.section-name {
     }
 }
 
-@media (min-width: 1500px) {
-    .last-page-btn {
-        bottom: 3vh;
-        left: 20vw;
-        z-index: 99;
-    }
-
-}
 
 /* ----------------------------------------------------------------------------------------------- */
 

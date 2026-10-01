@@ -541,6 +541,7 @@ div.content-item.body-icon-container {
 div.paragraph-section.recovery-room {
     margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 @media (max-width: 900px) {
